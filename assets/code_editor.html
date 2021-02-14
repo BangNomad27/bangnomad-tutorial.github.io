@@ -7,79 +7,85 @@
   <title>Code editor | BangNomad</title>
   
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: arial, sans-serif;
-      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
-    body {
-      /* background-image: url(../img/memphis.png); */
+    #editor, #viewer {
+      width: 50%;
+      height: 100%;
+      display: inline-block;
     }
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 70px;
-      margin: auto;
-      color: #333;
-    }
-    header .brand {
-      font-size:3.5rem;
-      margin-bottom: 25px;
-    }
-    header .brand span {
-      text-transform: uppercase;
-    }
-    header a {
-      display: block;
-      padding: 13px 20px;
-      text-decoration: none;
-      background-color: #111;
-      color: #fff;
-      border-radius: 7px;
-      font-weight: 700;
-    }
-    header a:hover {
-      background-color: rgba(17,17,17,.8);
-    }
-    article {
-      height: 50vh;
-      display: flex;
-      justify-content: space-between;
-      padding: 50px;
-    }
-    article textarea {
-      min-width: 45%;
-	    padding: 15px;
-	    font-size: 35px;
-	    border: none;
-	    outline: none;
-	    resize: none;
-	    background-color: #333;
-	    color: #fff;
-    }
-    article iframe {
-      min-width: 50%;
+    #container {
+      width: auto;
+      height: 100%;
+      white-space: nowrap;
+      overflow: hidden;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1 class="brand">Code Editor <span>Bang</span><span style="color: #2196f3;">Nomad</span></h1>
-    <a href="../index.html#home">Back Lobby</a>
-  </header>
+<body onload="ready()">
+  <!-- ! Code Editor - Start -->
+  <div id="container">
+    <div id="editor"></div>
+    <iframe id="viewer" frameborder="0"></iframe>
+  </div>
+  <!-- ! Code Editor - Finish -->
 
-  <article>
-    <textarea id="text-editor" onkeyup="editor()" placeholder="Ketikkan sesuatu disini..."></textarea>
-    <iframe frameborder="1" id="viewer" style="font-size: 20px;"></iframe>
-  </article>
+  <!-- TODO: Ace CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
   
+  <!-- TODO: Custom Javascript -->
   <script type="text/javascript">
-    function editor() {
-      let textContent = document.getElementById('text-editor').value;
-      document.getElementById('viewer').srcdoc = textContent;
+    function update() {
+      var view = document.getElementById('viewer').contentWindow.document;
+
+      view.open();
+      view.write(editor.getValue());
+      view.close();
+    }
+
+    function setupEditor() {
+      window.editor = ace.edit("editor");
+      editor.setTheme("ace/theme/monokai");
+      editor.getSession().setMode("ace/mode/html");
+      editor.setValue(`<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+</style>
+</head>
+<body>
+  
+</body>
+</html>
+      `, 1); // 1 = moves cursor to end
+
+      editor.getSession().on('change', function() {
+        update();
+      });
+
+      editor.focus();
+      editor.setOptions({
+        fontFamily: "Consolas",
+        fontSize: "16pt",
+        showLineNumbers: false,
+        showGutter: false,
+        vScrollBarAlwaysVisible: true,
+        enableBasicAutocompletion: false,
+        enableLiveAutocompletion: false,
+      });
+
+      editor.setShowPrintMargin(false);
+      editor.setBehavioursEnabled(false);
+    }
+
+    function ready() {
+      setupEditor();
     }
   </script>
 </body>
