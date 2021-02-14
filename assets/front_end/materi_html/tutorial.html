@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial 1 | HTML Tutorials</title>
+
+  <!-- TODO: Box URL to Icons -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- TODO: Custom CSS -->
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <!-- ! Button Home - Start -->
+  <div class="btn-home">
+    <div class="home">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </div>
+  <!-- ! Button Home - Finish -->
+
+  <!-- ! Navbar - Start -->
+  <nav id="home">
+    <a href="tutorial.html" class="brand">Bang<span>Nomad</span></a>
+    <a href="../../../index.html#home" class="btn-back">Back Lobby</a>
+  </nav>
+  <!-- ! Navbar - Finish -->
+
+  <!-- ! Get - Start -->
+  <div class="container">
+    <div class="started">
+      <h2>Mulai</h2>
+      <p>
+        <b>Apa itu Tag?</b> Tag adalah sebuah penanda atau kode yang dibuat dengan kurung patah ( &lt;...&gt; ), dan didalamnya terdapat namaTag-nya dan terdapat juga atributnya (pake jika dibutuhkan). Nah, Tag itu sendiri ada Tag pembuka dan Tag penutup (&lt;...&gt;namaTag&lt;/...&gt;).
+      </p>
+    </div>
+  </div>
+  <!-- ! Get - Finish -->
+
+  <!-- ! Materi - Start -->
+  <section id="teori" class="teori">
+    <aside>
+      <div class="sidenav">
+        <h4>Penggunaan NamaTag</h4>
+        <ul>
+          <li><a href="#paragraf">Paragraf</a></li>
+          <li><a href="#biu">Bold, Italic, Underline</a></li>
+          <li><a href="#heading">Heading</a></li>
+          <li><a href="#list">List</a></li>
+          <li><a href="#hyperlink">Hyperlink</a></li>
+          <li><a href="#image">Image</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#form">Form</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <article>
+      <h2>Penggunaan NamaTag</h2>
+      <div id="paragraf" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>p</span>&gt;</h3>
+          <p>
+            Digunakan untuk membuat sebuah isi / konten menjadi sebuah paragraf.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus omnis officia, repellat harum consectetur rem magnam, quod odit suscipit voluptates quam veniam voluptatem deserunt ullam blanditiis quaerat sunt accusantium!
+            </p>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>
+              <h2>Ini contoh Paragraf</h2>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit amet similique quaerat sequi fugit debitis tenetur, blanditiis atque? Itaque molestiae vitae, enim nam amet delectus, consequatur repellendus aperiam dolores provident aliquam fugit quis! Quaerat ea esse placeat fugiat! Laborum totam maiores cum, quae odio delectus culpa consectetur? Nisi tenetur assumenda voluptatem libero animi praesentium culpa quia quis ea facere suscipit veniam, id ab asperiores quibusdam tempore voluptate modi odit officiis.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="biu" class="content">
+        <div class="col">
+          <h3>
+            Tag &lt;<span>b</span>&gt;, &lt;<span>i</span>&gt;, dan &lt;<span>u</span>&gt;
+          </h3>
+          <p>
+            Tag <mark>bold</mark> digunakan untuk menebalkan teks, tag <mark>italic</mark> digunakan untuk memiringkan teks, dan tag <mark>underline</mark> digunakan untuk memberi garis bawah atau disebut juga garis penanda pada teks.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>
+              <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="heading" class="content">
+        <div class="col">
+          <h3>
+            Tag &lt;<span>h1</span>&gt;, &lt;<span>h2</span>&gt;, &lt;<span>h3</span>&gt;, &lt;<span>h4</span>&gt;, &lt;<span>h5</span>&gt;, dan &lt;<span>h6</span>&gt;
+          </h3>
+          <p>
+            Digunakan untuk menentukan ukuran besar kecilnya terhadap teksnya dan tag ini biasanya digunakan untuk sebuah judul halaman, judul iklan atau lainnya lah. Semakin besar angka pada <mark>Tagnya</mark>, semakin kecil teksnya.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output head">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h1>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </div>
+        </div>
+      </div>
+
+      <div id="list" class="content">
+        <div class="col">
+          <h3>
+            Tag &lt;<span>ol</span>&gt;, &lt;<span>ul</span>&gt;, dan &lt;<span>dl</span>&gt;
+          </h3>
+          <p>
+            Ketiga tag diatas digunakan untuk membuat sebuah list. Nah, untuk ketiga tag list tersebut, &lt;ol&gt; dan &lt;ul&gt; mempunyai tag tambahan, yaitu tag &lt;<span>li</span>&gt;. Sedangkan, tag &lt;dl&gt; tambahan tag-nya yaitu &lt;<span>dt</span>&gt; dan &lt;<span>dd</span>&gt;.
+          </p>
+        </div>
+        <!-- * Order List -->
+        <div class="col ls-line">
+          <p><mark>&lt;ol&gt; (order list)</mark> digunakan untuk membuat list secara terurut.</p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <ol>
+              <li>Senen</li>
+              <li>Selasa</li>
+              <li>Rabu</li>
+              <li>Kamis</li>
+              <li>Jumat</li>
+              <li>Sabtu</li>
+              <li>Minggu</li>
+            </ol>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <ol>
+              <li>Senen</li>
+              <li>Selasa</li>
+              <li>Rabu</li>
+              <li>Kamis</li>
+              <li>Jumat</li>
+              <li>Sabtu</li>
+              <li>Minggu</li>
+            </ol>
+          </div>
+        </div>
+        <!-- * Un-Order List -->
+        <div class="col ls-line">
+          <p><mark>&lt;ul&gt; (un-order list)</mark> digunakan untuk membuat list tak berurut.</p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <ul>
+              <li>Mie Goreng</li>
+              <li>Ayam Goreng</li>
+              <li>Nasi Goreng</li>
+            </ul>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <ul>
+              <li>Mie Goreng</li>
+              <li>Ayam Goreng</li>
+              <li>Nasi Goreng</li>
+            </ul>
+          </div>
+        </div>
+        <!-- * Definision List -->
+        <div class="col ls-line">
+          <p><mark>&lt;dl&gt; (definision list)</mark> digunakan untuk mendefinisikan sebuah teks pada suatu list.</p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <dl>
+              <dt>Ini Judul</dt>
+              <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, earum.</dd>
+            </dl>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <dl>
+              <dt>Ini Judul</dt>
+              <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis?</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div id="hyperlink" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>a</span>&gt;</h3>
+          <p>
+            Tag anchor digunakan untuk merubah teks menjadi sebuah teks link, sebagai eksternal link maupun internal link. Tag anchor membutuhkan atribut tambahan yaitu <mark>href="value"</mark> dan juga terdapat atribut <mark>target="_blank"</mark> yang fungsinya ketika link di klik, maka akan membuat <mark>tab baru</mark> di browser kalian.
+          </p>
+        </div>
+        <!-- * Eksternal Link -->
+        <div class="col ls-line">
+          <p>
+            <mark>Eksternal link</mark> ialah tujuannya ke url website didalam browser.
+          </p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <a href="https://www.instagram.com">Klik disini</a>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <a href="https://www.instagram.com">Klik disini</a>
+          </div>
+        </div>
+        <!-- * Internal Link -->
+        <div class="col ls-line">
+          <p>
+            <mark>Internal Link</mark> ialah tujuannya ke url file lokal kita.
+          </p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <a href="index.html" target="_blank">Klik disini</a>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <a href="tutorial_1.html" target="_blank">Klik disini</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="image" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>img</span>&gt;</h3>
+          <p>
+            Tag image digunakan untuk menampilkan sebuah gambar/logo. Nah, tag image punya atribut khusus tambahan yaitu <mark>src="value"</mark> dan atribut lainnya seperti <mark>alt</mark>, <mark>title</mark>, <mark>width</mark>, <mark>height</mark>. 
+            <br>
+            Ekstension pada gambar yaitu <b>png</b>, <b>jpg</b>, dan juga <b>jpeg</b>.
+            <br><br>
+            Jika kalian memakai gambar/logo yang ada di browser, besar kemungkinan akan terkena Copyright. Oleh karena itu, buat gambar/logo sendiri dengan software atau cari di browser gambar yang bebas pakai atau kunjungi website yang menyediakan gambar/logo yang bebas pakai.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <img src="../img/gambar.png" alt="Tester" title="Komputer" width="200" height="200">
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <img src="../../../img/3.png" alt="Tester" title="Komputer" width="200" height="200">
+          </div>
+        </div>
+      </div>
+
+      <div id="table" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>table</span>&gt;</h3>
+          <p>
+            Didalam tag table ada tag tambahan lagi, yaitu &lt;<span>thead</span>&gt;, &lt;<span>tbody</span>&gt;, &lt;<span>tr</span>&gt; dan &lt;<span>th</span>&gt;. Terminologi pada tag table:
+            <pre>   Field = Kolom</pre>
+            <pre>   Record = Baris</pre>
+          </p>
+          <p>Tag table mempunyai atribut khusus juga, yaitu <mark>border</mark>, <mark>cellspacing</mark>, <mark>cellpading</mark>, <mark>colspan</mark>, dan <mark>rowspan</mark>.</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <table border="1" cellspacing="0" cellpadding="5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Kolom 1</th>
+                  <th>Kolom 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Baris 1</th>
+                  <th>baris 1, kolom 1</th>
+                  <th>baris 1, kolom 2</th>
+                </tr>
+                <tr>
+                  <th>Baris 2</th>
+                  <th>baris 2, kolom 1</th>
+                  <th>baris 2, kolom 2</th>
+                </tr>
+              </tbody>
+            </table>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <table border="1" cellspacing="0" cellpadding="5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Kolom 1</th>
+                  <th>Kolom 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Baris 1</th>
+                  <th>baris 1, kolom 1</th>
+                  <th>baris 1, kolom 2</th>
+                </tr>
+                <tr>
+                  <th>Baris 2</th>
+                  <th>baris 2, kolom 1</th>
+                  <th>baris 2, kolom 2</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- * Row & Cols -->
+        <div class="col ls-line">
+          <p>
+            <mark>Rowspan</mark> untuk membuat filed baru, sedangkan <mark>colspan</mark> untuk membuat record baru.
+          </p>
+          <h3>Kodenya:</h3>
+          <xmp>
+            <table border="1" cellspacing="0" cellpadding="5">
+              <tr>
+                <th rowspan="3">Rowspan 3</th>
+                <th colspan="2">Cosplan 2</th>
+              </tr>
+              <tr>
+                <th>2,1</th>
+                <th>2,2</th>
+              </tr>
+              <tr>
+                <th>3,1</th>
+                <th>3,2</th>
+              </tr>
+            </table>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <table border="1" cellspacing="0" cellpadding="5">
+              <tr>
+                <th rowspan="3">Rowspan 3</th>
+                <th colspan="2">Cosplan 2</th>
+              </tr>
+              <tr>
+                <th>2,1</th>
+                <th>2,2</th>
+              </tr>
+              <tr>
+                <th>3,1</th>
+                <th>3,2</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- * Latihan Buat Table -->
+        <div class="col ls-line">
+          <h3 style="color: #d44;">Latihan:</h3>
+          <p>
+            Buatlah tabel dibawah ini. Ingat! gunakan <mark>rowspan</mark> dan <mark>colspan</mark> bersamaan dengan benar.
+          </p>
+          <table border="1" cellspacing="0" cellpadding="10" class="table-lat">
+            <tr>
+              <th>1,1</th>
+              <th>1,2</th>
+              <th>1,3</th>
+              <th>1,4</th>
+            </tr>
+            <tr>
+              <th>2,1</th>
+              <th rowspan="2" colspan="2"><b>?</b></th>
+              <th>2,4</th>
+            </tr>
+            <tr>
+              <th>3,1</th>
+              <th>3,4</th>
+            </tr>
+            <tr>
+              <th>4,1</th>
+              <th>4,2</th>
+              <th>4,3</th>
+              <th>4,4</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="form" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>form</span>&gt;</h3>
+          <p>
+            Didalam tag form terdapat tag tambahan, yaitu &lt;<span>input</span>&gt;, &lt;<span>label</span>&gt;, &lt;<span>select</span>&gt;, &lt;<span>button</span>&gt;, &lt;<span>textarea</span>&gt;. 
+            <br>
+            Nah didalam tag &lt;select&gt; ada tag tambahan lagi, yaitu &lt;<span>option</span>&gt;
+          </p>
+          <p>
+            Tag &lt;input&gt; terdapat atribut <mark>type</mark> yang nilainya:
+            <pre>   *- text</pre>
+            <pre>   *- password</pre>
+            <pre>   *- radio</pre>
+            <pre>   *- checkbox</pre>
+          </p>
+          <p>
+            Tag &lt;button&gt; terdapat atribut <mark>type</mark> yang nilainya:
+            <pre>   *- submit</pre>
+            <pre>   *- reset</pre>
+            <pre>   *- button</pre>
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <article>
+              <form>
+                <label for="username">username :</label>
+                <input type="text" id="username">
+                <br>
+                <label for="password">password :</label>
+                <input type="password" id="password">
+                <br>
+                <input type="radio" id="pria" name="jeniskelamin"><label for="pria">pria</label>
+                <input type="radio" id="wanita" name="jeniskelamin"><label for="wanita">wanita</label>
+                <br>
+                <input type="checkbox" id="berenang"><label for="berenang">berenang</label>
+                <input type="checkbox" id="menulis"><label for="menulis">menulis</label>
+                <input type="checkbox" id="ngoding"><label for="ngoding">ngoding</label>
+                <br>
+                <textarea placeholder="COMMENT..."></textarea>
+                <br>
+                <select>
+                  <option>Jakarta</option>
+                  <option>Bandung</option>
+                  <option>Tangerang</option>
+                </select>
+                <br>
+                <button type="submit">Kirim!</button>
+              </form>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <form>
+              <label for="username">username :</label>
+              <input type="text" id="username">
+              <br>
+              <label for="password">password :</label>
+              <input type="password" id="password">
+              <br>
+              <input type="radio" id="pria" name="jeniskelamin"><label for="pria">pria</label>
+              <input type="radio" id="wanita" name="jeniskelamin"><label for="wanita">wanita</label>
+              <br>
+              <input type="checkbox" id="berenang"><label for="berenang">berenang</label>
+              <input type="checkbox" id="menulis"><label for="menulis">menulis</label>
+              <input type="checkbox" id="ngoding"><label for="ngoding">ngoding</label>
+              <br>
+              <textarea placeholder="COMMENT..."></textarea>
+              <br>
+              <select>
+                <option>Jakarta</option>
+                <option>Bandung</option>
+                <option>Tangerang</option>
+              </select>
+              <br>
+              <button type="submit">Kirim!</button>
+            </form>
+          </div>
+        </div>
+        <!-- * Latihan Buat Form -->
+        <div class="col ls-line">
+          <h3 style="color: #d44;">Latihan:</h3>
+          <p>
+            Buatlah form dibawah ini dengan bantuan &lt;table&gt;.
+          </p>
+          <table border="0" cellspacing="0" cellpadding="3" class="form-lat">
+						<tr>
+							<th><label for="Nama">Nama:</label></th>
+							<th><input type="text" id="Nama"></th>
+						</tr>
+						<tr>
+							<th><label for="password">Password:</label></th>
+							<th><input type="password" id="password"></th>
+						</tr>
+						<tr>
+							<th colspan="2">
+								<label for="pria">Pria</label><input type="radio" id="pria" name="jeniskelamin">
+								<label for="wanita">Wanita</label><input type="radio" id="wanita" name="jeniskelamin">
+							</th>
+						</tr>
+						<tr>
+							<th colspan="2">
+								<label for="menulis">Menulis</label><input type="checkbox" id="menulis">
+								<label for="ngoding">Ngoding</label><input type="checkbox" id="ngoding">
+								<label for="membaca">Membaca</label><input type="checkbox" id="membaca">
+							</th>
+						</tr>
+						<tr>
+							<th>Tempat Lahir:</th>
+							<th>
+								<select>
+									<option>Jakarta</option>
+									<option>Bandung</option>
+									<option>Tangerang</option>
+								</select>
+							</th>
+						</tr>
+						<tr>
+							<th colspan="2"><textarea placeholder="COMMENT..."></textarea></th>
+						</tr>
+						<tr class="tr">
+							<th colspan="2" style="text-align: center;"><button type="submit">Kirim!</button></th>
+						</tr>
+					</table>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- ! Materi - Finish -->
+</body>
+</html>
