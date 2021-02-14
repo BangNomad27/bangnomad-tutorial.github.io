@@ -53,7 +53,7 @@
       editor.setTheme("ace/theme/monokai");
       editor.getSession().setMode("ace/mode/html");
       editor.setValue(`<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <style>
 
@@ -73,8 +73,8 @@
       editor.setOptions({
         fontFamily: "Consolas",
         fontSize: "16pt",
-        showLineNumbers: false,
-        showGutter: false,
+        showLineNumbers: true,
+        showGutter: true,
         vScrollBarAlwaysVisible: true,
         enableBasicAutocompletion: false,
         enableLiveAutocompletion: false,
@@ -87,6 +87,7 @@
     function ready() {
       setupEditor();
     }
+    alert('CTRL + SHIFT + TAB untuk balik ke Dashboard');
   </script>
 </body>
 </html>
