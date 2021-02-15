@@ -25,6 +25,15 @@
       white-space: nowrap;
       overflow: hidden;
     }
+    @media screen and (max-width: 991px) {
+      #container {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      #editor, #viewer {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body onload="ready()">

@@ -39,7 +39,7 @@ section {
 .btn-home .home:hover .bx {
 	background-color: rgba(44,62,80,.9);
 }
-/* ! Area Header */
+/* ! Header */
 header {
   position: relative;
   width: 100%;
@@ -56,7 +56,7 @@ header #bg {
   background: url(../img/banner1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -100px;
+  background-position: 0 0;
 }
 header .title {
   position: relative;
@@ -77,13 +77,42 @@ header .title {
 	opacity: 1;
 	transform: translateY(0);
 }
-/* ! Area Opening */
+/* ! Nav Mobile */
+.nav-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #111;
+  display: none;
+  z-index: 20;
+}
+.nav-mobile ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+}
+.nav-mobile ul li {
+  margin-right: 30px;
+}
+.nav-mobile ul li a {
+  display: block;
+  color: #fff;
+  padding: 0 15px;
+  text-decoration: none;
+}
+.nav-mobile ul li a:hover {
+  background-color: #2196f3;
+}
+/* ! Opening */
 .opening {
   position: relative;
   /* margin-top: 200vh; */
   background-color: #fff;
 }
-/* * Opening - Navbar */
+/* * Opening Navbar */
 nav {
   position: sticky;
   top: 0;
@@ -132,7 +161,7 @@ nav ul li:hover {
   background-color: #2196f3;
   color: #fff;
 }
-/* * Opening - Content */
+/* * Opening Content */
 .opening .content {
   padding: 100px;
 }
@@ -172,7 +201,7 @@ table tbody th {
   font-size: 1.2em;
   font-weight: 600;
 }
-/* ! Area About */
+/* ! About */
 .about {
   overflow: hidden;
   /* background-color: #e5e5e9; */
@@ -220,7 +249,7 @@ table tbody th {
   max-width: 100%;
   border-bottom: 3px solid #333;
 }
-/* ! Area Note */
+/* ! Note */
 .container {
   width: 400px;
   height: 100px;
@@ -236,7 +265,7 @@ table tbody th {
 .container .note h3 {
   font-weight: 500;
 }
-/* ! Area Materi */
+/* ! Materi */
 .materi {
   width: 100%;
 	height: 770px;
@@ -262,6 +291,7 @@ table tbody th {
 .btn-box .bx {
 	margin-right: 10px;
 }
+/* ! FrontEnd */
 .fe .btn-box button:hover:nth-child(1) .bx {
 	color: #ff7846;
 }
@@ -341,10 +371,7 @@ table tbody th {
   color: #222;
   text-shadow: 0 2px 2px #fff;
 }
-#content1,
-#content5,
-#content10,
-#content12 {
+#content1, #content5, #content10, #content12 {
 	transform: translateX(0);
 }
 #btn1 {
@@ -359,7 +386,7 @@ table tbody th {
 #btn12 {
   color: #353b48;
 }
-/* ! Area Back End */
+/* ! BackEnd */
 .be .btn-box button:hover:nth-child(1) .bx {
 	color: #0b0ba2;
 }
@@ -391,7 +418,7 @@ table tbody th {
 .content-right.java {
   background-color: #d44;
 }
-/* ! Area Database */
+/* ! Database */
 .db .btn-box button:hover:nth-child(1) .bx {
   color: #ff8c00;
 }
@@ -413,7 +440,7 @@ table tbody th {
 .content-right.api {
   background-color: #800000;
 }
-/* ! Area VCS */
+/* ! VCS */
 .vcs .btn-box button:hover:nth-child(1) .bx {
   color: #1b1c1d;
 }
@@ -431,7 +458,7 @@ table tbody th {
 .content-right.git {
   background-color: #ff0000;
 }
-/* ! Area Footer */
+/* ! Footer */
 footer {
   position: relative;
   background-color: #111;
@@ -458,4 +485,81 @@ footer .copy {
   text-align: center;
   color: #fff;
   font-size: 1.2em;
+}
+
+/* ! Responsive Tablet IPAD */
+@media screen and (max-width: 991px) {
+  section, .opening .content {
+    padding: 50px 50px;
+  }
+  /* ! Selector: None; */
+  header, nav, .tabel-left, .tabel-right, .tabel-right + p, .aboutImg, .content-right {
+    display: none;
+  }
+  /* ! Nav Mobile */
+  .nav-mobile {
+    display: block;
+  }
+  /* ! Opening */
+  /* * Opening Content */
+  .opening .content .title-2 {
+    flex-direction: column;
+  }
+  .opening .content .title-2 h2 {
+    font-size: 2em;
+  }
+  .opening .content .title-2 .versi {
+    align-self: flex-end;
+  }
+}
+/* ! Responsive Mobile */
+@media screen and (max-width: 600px) {
+  section, .opening .content {
+    padding: 20px 20px;
+  }
+  /* ! Button Home */
+  .btn-home {
+    bottom: 70px;
+	  right: 30px;
+  }
+  .btn-home .home .bx {
+    font-size: 20px;
+  }
+  /* ! Opening */
+  /* * Opening Content */
+  .opening .content .title-2 h2{
+    font-size: 1.5em;
+  }
+  .opening .content .title-2 .versi, .opening .content p, .about .content .aboutBox p, .content-left p {
+    font-size: 16px;
+  }
+  /* ! Heading */
+  .heading h2 {
+    font-size: 27px;
+  }
+  .about .content .aboutBox h3 {
+    font-size: 1.2em;
+  }
+  /* ! Container */
+  .container {
+    width: 300px;
+    height: 125px;
+  }
+  .btn-box {
+    display: none;
+  }
+  /* ! Materi */
+  .materi {
+    height: 0%;
+    position: static;
+    overflow: visible;
+  }
+  .materi .content {
+    position: static;
+    transform: translateX(0);
+    padding-bottom: 20px;
+  }
+  .content-left p {
+    padding: 10px 0;
+  }
 }
