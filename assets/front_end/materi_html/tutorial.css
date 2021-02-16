@@ -24,7 +24,7 @@ dd {
   padding-left: 20px;
 }
 pre {
-  font-size: var(--sizeTeks);
+  font-size: var(--mainFontSize);
 }
 th {
   padding: 5px;
@@ -32,6 +32,13 @@ th {
 }
 textarea {
   resize: none;
+}
+dialog, fieldset {
+  padding: 10px;
+  margin: auto;
+}
+audio, video, input {
+  outline: none;
 }
 section {
   width: 100%;
@@ -112,20 +119,20 @@ nav .btn-back:hover {
 }
 aside {
   position: sticky;
-	top: 50px;
+	top: 25px;
   min-width: 25%;
 	height: 100vh;
 }
 aside .sidenav {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   padding-right: 10px;
   border-right: var(--borderContent);
 }
 aside .sidenav h4 {
   color: #555;
-  align-self: center;
+  align-self: flex-start;
   margin-bottom: 5px;
   font-weight: 500;
 }
@@ -173,8 +180,13 @@ article {
   font-size: var(--sizeTeks);
   text-align: var(--justifyText);
 }
-.content .col xmp,
-.content .col .output {
+.content .col details summary {
+  margin-top: 3px;
+  color: #2196f3;
+  outline: none;
+  cursor: pointer;
+}
+.content .col details, .content .col xmp, .content .col .output {
   font-size: var(--mainFontSize);
 }
 .content .col xmp {
@@ -187,11 +199,15 @@ article {
   white-space: pre-wrap;
 }
 .content .col .output {
+  position: relative;
   width: 100%;
   height: 100px;
   overflow: auto;
   border: 2px solid #333;
   padding: 20px;
+}
+.content .col .output.line {
+  height: 200px;
 }
 /* * Heading Edit */
 .col .head {
@@ -226,4 +242,41 @@ article {
 }
 .form-lat th {
   text-align: left;
+}
+
+@media screen and (max-width: 991px) {
+  section {
+    /* padding: 50px; */
+  }
+  /* ! Button Home */
+  .btn-home {
+    bottom: 70px;
+	  right: 30px;
+  }
+  .btn-home .home .bx {
+    font-size: 20px;
+  }
+  .container .started {
+    margin: 50px 50px;
+  }
+  nav, aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
+    padding: 50px 0;
+  }
+  .container .started {
+    margin: 50px 0;
+  }
+  .container .started h2 {
+    font-size: 30px;
+  }
+  .container .started p, .content .col:first-child p, .content .ls-line p {
+    font-size: 16px;
+  }
+  .started, article {
+    padding: 0;
+  }
 }

@@ -46,13 +46,34 @@
         <h4>Penggunaan NamaTag</h4>
         <ul>
           <li><a href="#paragraf">Paragraf</a></li>
-          <li><a href="#biu">Bold, Italic, Underline</a></li>
           <li><a href="#heading">Heading</a></li>
           <li><a href="#list">List</a></li>
           <li><a href="#hyperlink">Hyperlink</a></li>
           <li><a href="#image">Image</a></li>
           <li><a href="#table">Table</a></li>
           <li><a href="#form">Form</a></li>
+        </ul>
+
+        <h4>Tag Pendukung</h4>
+        <ul>
+          <li><a href="#biu">Bold, Italic, Underline</a></li>
+          <li><a href="#meter">Meter & Progress</a></li>
+          <li><a href="#brhr">Br & Hr</a></li>
+          <li><a href="#pre">Pre & Mark</a></li>
+          <li><a href="#supsub">Sup & Sub</a></li>
+          <li><a href="#dialog">Dialog</a></li>
+          <li><a href="#code">Code & XMP</a></li>
+        </ul>
+
+        <h4>Tag di HTML 5</h4>
+        <ul>
+          <li><a href="#col">Colgroup & Col</a></li>
+          <li><a href="#detail">Details & Datalist</a></li>
+          <li><a href="#fig">Figure & Figcaption</a></li>
+          <li><a href="#field">Fildset & Legend</a></li>
+          <li><a href="#iframe">Iframe</a></li>
+          <li><a href="#audio">Audio & Source</a></li>
+          <li><a href="#video">Embed & Video</a></li>
         </ul>
       </div>
     </aside>
@@ -80,31 +101,6 @@
             <p>
               <h2>Ini contoh Paragraf</h2>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit amet similique quaerat sequi fugit debitis tenetur, blanditiis atque? Itaque molestiae vitae, enim nam amet delectus, consequatur repellendus aperiam dolores provident aliquam fugit quis! Quaerat ea esse placeat fugiat! Laborum totam maiores cum, quae odio delectus culpa consectetur? Nisi tenetur assumenda voluptatem libero animi praesentium culpa quia quis ea facere suscipit veniam, id ab asperiores quibusdam tempore voluptate modi odit officiis.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div id="biu" class="content">
-        <div class="col">
-          <h3>
-            Tag &lt;<span>b</span>&gt;, &lt;<span>i</span>&gt;, dan &lt;<span>u</span>&gt;
-          </h3>
-          <p>
-            Tag <mark>bold</mark> digunakan untuk menebalkan teks, tag <mark>italic</mark> digunakan untuk memiringkan teks, dan tag <mark>underline</mark> digunakan untuk memberi garis bawah atau disebut juga garis penanda pada teks.
-          </p>
-        </div>
-        <div class="col">
-          <h3>Kodenya:</h3>
-          <xmp>
-            <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
-          </xmp>
-        </div>
-        <div class="col">
-          <h3>Outputnya:</h3>
-          <div class="output">
-            <p>
-              <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
             </p>
           </div>
         </div>
@@ -230,8 +226,24 @@
         <div class="col">
           <h3>Tag &lt;<span>a</span>&gt;</h3>
           <p>
-            Tag anchor digunakan untuk merubah teks menjadi sebuah teks link, sebagai eksternal link maupun internal link. Tag anchor membutuhkan atribut tambahan yaitu <mark>href="value"</mark> dan juga terdapat atribut <mark>target="_blank"</mark> yang fungsinya ketika link di klik, maka akan membuat <mark>tab baru</mark> di browser kalian.
+            Tag anchor digunakan untuk merubah teks menjadi sebuah teks link, sebagai eksternal link maupun internal link. Tag anchor membutuhkan atribut tambahan yaitu <mark>href</mark> dan juga terdapat atribut <mark>target="_blank"</mark> yang fungsinya ketika link tersebut di klik, maka akan membuat <mark>tab baru</mark> di browser kalian.
           </p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Nah atribut target banyak nilainya, seperti:</dt>
+              <dd>
+                1. _blank
+                <br>
+                2. _self
+                <br>
+                3. _top
+                <br>
+                4. _parent
+              </dd>
+            </dl>
+            <p>Ada juga atribut <mark>download</mark>, digunakan sebagai link download.</p>
+          </details>
         </div>
         <!-- * Eksternal Link -->
         <div class="col ls-line">
@@ -274,9 +286,13 @@
             Tag image digunakan untuk menampilkan sebuah gambar/logo. Nah, tag image punya atribut khusus tambahan yaitu <mark>src="value"</mark> dan atribut lainnya seperti <mark>alt</mark>, <mark>title</mark>, <mark>width</mark>, <mark>height</mark>. 
             <br>
             Ekstension pada gambar yaitu <b>png</b>, <b>jpg</b>, dan juga <b>jpeg</b>.
-            <br><br>
-            Jika kalian memakai gambar/logo yang ada di browser, besar kemungkinan akan terkena Copyright. Oleh karena itu, buat gambar/logo sendiri dengan software atau cari di browser gambar yang bebas pakai atau kunjungi website yang menyediakan gambar/logo yang bebas pakai.
           </p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <p>
+              Jika kalian memakai gambar/logo yang ada di browser, besar kemungkinan akan terkena Copyright. Oleh karena itu, buat gambar/logo sendiri dengan software atau cari di browser gambar yang bebas pakai atau kunjungi website yang menyediakan gambar/logo yang bebas pakai.
+            </p>
+          </details>
         </div>
         <div class="col">
           <h3>Kodenya:</h3>
@@ -432,23 +448,59 @@
         <div class="col">
           <h3>Tag &lt;<span>form</span>&gt;</h3>
           <p>
-            Didalam tag form terdapat tag tambahan, yaitu &lt;<span>input</span>&gt;, &lt;<span>label</span>&gt;, &lt;<span>select</span>&gt;, &lt;<span>button</span>&gt;, &lt;<span>textarea</span>&gt;. 
-            <br>
-            Nah didalam tag &lt;select&gt; ada tag tambahan lagi, yaitu &lt;<span>option</span>&gt;
-          </p>
-          <p>
-            Tag &lt;input&gt; terdapat atribut <mark>type</mark> yang nilainya:
-            <pre>   *- text</pre>
-            <pre>   *- password</pre>
-            <pre>   *- radio</pre>
-            <pre>   *- checkbox</pre>
-          </p>
-          <p>
+            Didalam tag form terdapat tag tambahan, yaitu &lt;<span>input</span>&gt;, &lt;<span>label</span>&gt;, &lt;<span>select</span>&gt;, &lt;<span>button</span>&gt;, &lt;<span>textarea</span>&gt;. Nah didalam tag &lt;select&gt; ada tag tambahan lagi, yaitu &lt;<span>option</span>&gt;. <br><br>
             Tag &lt;button&gt; terdapat atribut <mark>type</mark> yang nilainya:
             <pre>   *- submit</pre>
             <pre>   *- reset</pre>
             <pre>   *- button</pre>
           </p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Tag &lt;input&gt; banyak sekali nilai pada atribut <mark>type</mark>, seperti:</dt>
+              <dd>
+                *- <b>text</b>, untuk menuliskan sebuah teks <br>
+                *- <b>email</b>, untuk menuliskan sebuah email <br>
+                *- <b>password</b>, untuk menuliskan sebuah password <br>
+                *- <b>radio</b>, hanya dapat memilih satu dengan tambahan atribut <mark>name</mark> <br>
+                *- <b>checkbox</b>, bisa memilih lebih dari satu <br>
+                *- <b>date</b>, menentukan tanggal lahir <br>
+                *- <b>time</b>, menentukan waktu <br>
+                *- <b>datetime-local</b>, menentukan tanggal lahir dan waktu <br>
+                *- <b>number</b>, menentukan angka yang akan dipilih <br>
+                *- <b>month</b>, menentukan tahun dan bulan <br>
+                *- <b>week</b>, menentukan hari kosong atau jadwal <br>
+                *- <b>color</b>, membuat button untuk mencari warna <br>
+                *- <b>file</b>, membuat button untuk menaruh sebuah file <br>
+                *- <b>range</b>, membuat bar persentasi <br>
+                *- <b>search</b>, untuk menuliskan sesuatu yang ingin dicari
+              </dd>
+            </dl>
+            <dl>
+              <dt>Ada juga atribut <mark>accept</mark> untuk menentukan file apa yang ingin diterima, nilainya seperti:</dt>
+              <dd>
+                *- image/* <br>
+                *- audio/* <br>
+                *- video/* 
+              </dd>
+            </dl>
+            <dl>
+              <dt>Atribut <mark>action</mark> ialah:</dt>
+              <dd>Untuk memberikan tujuan ketika selesai membuat form-nya</dd>
+            </dl>
+            <dl>
+              <dt>Atribut <mark>method</mark>, nilainya:</dt>
+              <dd>*- get <br> *- post</dd>
+            </dl>
+            <dl>
+              <dt>Atribut <mark>autocomplete</mark> ialah:</dt>
+              <dd>Untuk memperlihatkan histori penulisan yang sebelumnya diketik, nilainya: <br> *- on <br> *- off</dd>
+            </dl>
+            <dl>
+              <dt>Atribut <mark>autofocus</mark> ialah:</dt>
+              <dd>Untuk memfokuskan titik cursor mouse-nya</dd>
+            </dl>
+          </details>
         </div>
         <div class="col">
           <h3>Kodenya:</h3>
@@ -554,6 +606,460 @@
 							<th colspan="2" style="text-align: center;"><button type="submit">Kirim!</button></th>
 						</tr>
 					</table>
+        </div>
+      </div>
+      <br>
+
+      <h2>Tag Pendukung</h2>
+      <div id="biu" class="content">
+        <div class="col">
+          <h3>
+            Tag &lt;<span>b</span>&gt;, &lt;<span>i</span>&gt;, dan &lt;<span>u</span>&gt;
+          </h3>
+          <p>
+            Tag <mark>bold</mark> digunakan untuk menebalkan teks, tag <mark>italic</mark> digunakan untuk memiringkan teks, dan tag <mark>underline</mark> digunakan untuk memberi garis bawah atau disebut juga garis penanda pada teks.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>
+              <b>Selamat datang</b> <i>di website</i> <u>BangNomad</u>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="meter" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>meter</span>&gt; dan &lt;<span>progress</span>&gt;</h3>
+          <p>
+            Kedua tag tersebut digunakan untuk membuat sebuah bar persentasi dan mempunyai atribut khusus untuk namaTag ini, yaitu <mark>min</mark>, <mark>max</mark>, dan <mark>value</mark>.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <p>
+              HTML <meter min="0" max="10" value="7"></meter>
+              CSS <meter min="0" max="10" value="9"></meter>
+              Javascript <meter min="0" max="10" value="4"></meter>
+              Downloading : <progress min="0" max="100" value="69"></progress>
+            </p>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>
+              HTML <meter min="0" max="10" value="7"></meter>
+              CSS <meter min="0" max="10" value="9"></meter>
+              Javascript <meter min="0" max="10" value="4"></meter> <br><br>
+              Downloading : <progress min="0" max="100" value="69"></progress>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="brhr" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>br</span>&gt; dan &lt;<span>hr</span>&gt;</h3>
+          <p>
+            Tag &lt;br&gt; dan &lt;hr&gt; digunakan sebagai tag pendukung di HTML. &lt;br&gt; untuk membuat baris baru dibawah paragraf, sedangkan &lt;hr&gt; untuk membuat sebuah garis horizontal.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>Ratione perferendis impedit at modi dicta repellendus nulla cupiditate commodi debitis ducimus!<hr> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illum reiciendis!</p>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br>Ratione perferendis impedit at modi dicta repellendus nulla cupiditate commodi debitis ducimus!<hr> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, illum reiciendis!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="pre" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>pre</span>&gt; dan &lt;<span>mark</span>&gt;</h3>
+          <p>
+            Tag &lt;pre&gt; untuk membuat spasi menjadi lebih panjang jarak antar kata nya. Karena kalo pake Tag &lt;p&gt; spasi sebanyak mungkin ga bakal ngaruh. Sedangkan tag &lt;mark&gt; untuk membuat label pada teks.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <pre>Halo, nama saya Muhammad    <mark>Naufal</mark>    Thufailah.</pre>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <pre>Halo, nama saya Muhammad    <mark>Naufal</mark>    Thufailah.</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="supsub" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>sup</span>&gt; dan &lt;<span>sub</span>&gt;</h3>
+          <p>
+            Untuk membuat teks menjadi berpangkat, dan tag ini untuk kalkulasi perhitungan seperti kalkulator.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <p>2<sup>2</sup> + 2<sup>3</sup> = 12 <br> H<sub>2</sub>O adalah ...</p>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <p>2<sup>2</sup> + 2<sup>3</sup> = 12 <br> H<sub>2</sub>O adalah ...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="dialog" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>dialog</span>&gt;</h3>
+          <p>
+            Untuk membuat kotak dialog antar user dengan tambahan atribut <mark>open</mark>
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <dialog open>Selamat Datang</dialog>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <dialog open>Selamat Datang</dialog>
+          </div>
+        </div>
+      </div>
+
+      <div id="code" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>code</span>&gt; dan &lt;<span>xmp</span>&gt;</h3>
+          <p>
+            Digunakan untuk menampilkan sebuah source code yang kita kodingin ke dalam website.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <code>console.log('ok');</code>
+          </xmp>
+          <xmp>
+            <xmp>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, voluptatibus.< /xmp>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya &lt;code&gt;:</h3>
+          <div class="output">
+            <code>console.log('ok');</code>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Outputnya &lt;xmp&gt;:</h3>
+          <div class="output">
+            <xmp>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eligendi?
+            </xmp>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h2>Tag di HTML 5</h2>
+      <div id="col" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>colgroup</span>&gt; dan &lt;<span>col</span>&gt;</h3>
+          <p>
+            Digunakan untuk bantuan pada tag &lt;table&gt; yang mana tugas dari &lt;colgroup&gt; dan &lt;col&gt; adalah meng-grup-kan isi dari tabel tersebut, sehingga tag &lt;col&gt; mempunyai atribut tambahan, yaitu <mark>span</mark>.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <table border="1">
+              <caption>Tabel Tester</caption>
+              <colgroup>
+                <col span="1" style="background-color: #0ff;">
+                <col span="2" style="background-color: #f0f;">
+                <col span="1" style="background-color: #ff0;">
+              </colgroup>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Tempat</th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th>Kasep</th>
+                <th>22</th>
+                <th>Bandung</th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>Ismet</th>
+                <th>19</th>
+                <th>Tangerang</th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>Romli</th>
+                <th>28</th>
+                <th>Jogja</th>
+              </tr>
+            </table>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <table border="1">
+              <caption>Tabel Tester</caption>
+              <colgroup>
+                <col span="1" style="background-color: #0ff;">
+                <col span="2" style="background-color: #f0f;">
+                <col span="1" style="background-color: #ff0;">
+              </colgroup>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Tempat</th>
+              </tr>
+              <tr>
+                <th>1</th>
+                <th>Kasep</th>
+                <th>22</th>
+                <th>Bandung</th>
+              </tr>
+              <tr>
+                <th>2</th>
+                <th>Ismet</th>
+                <th>19</th>
+                <th>Tangerang</th>
+              </tr>
+              <tr>
+                <th>3</th>
+                <th>Romli</th>
+                <th>28</th>
+                <th>Semarang</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="detail" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>details</span>&gt; dan &lt;<span>datalist</span>&gt;</h3>
+          <p>
+            Tag &lt;details&gt; mempunyai tag tambahan, yaitu &lt;summary&gt; ialah untuk membuat paragraf yang di hide dan ketika di klik akan menampilkan data detailnya. Sedangkan tag &lt;datalist&gt; tag tambahannya &lt;option&gt; ialah untuk membuat list data dengan cara menuliskannya.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <details>
+              <summary>Details</summary>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, laudantium! Atque, blanditiis, at expedita repudiandae inventore cumque suscipit provident rerum mollitia sint iusto nisi sapiente.</p>
+            </details>
+            <br><br>
+            <input list="kota">
+            <datalist id="kota">
+              <option value="Jakarta"></option>
+              <option value="Bekasi"></option>
+              <option value="Cirebon"></option>
+            </datalist>
+            <input type="submit">
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output line">
+            <h4>Contoh &lt;details&gt;</h4>
+            <details>
+              <summary>Details</summary>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, laudantium! Atque, blanditiis, at expedita repudiandae inventore cumque suscipit provident rerum mollitia sint iusto nisi sapiente.</p>
+            </details>
+            <br><br>
+            <h4>Contoh &lt;datalist&gt;</h4>
+            <input list="kota">
+            <datalist id="kota">
+              <option value="Jakarta"></option>
+              <option value="Bekasi"></option>
+              <option value="Cirebon"></option>
+            </datalist>
+            <input type="submit">
+          </div>
+        </div>
+      </div>
+
+      <div id="fig" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>figure</span>&gt; dan &lt;<span>figcaption</span>&gt;</h3>
+          <p>
+            Tag ini untuk membantu tag &lt;img&gt; agar mempermudah saat kolaborasi dengan bahasa lain seperti CSS.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <figure>
+              <img src="image.jpg" alt="Tester">
+              <figcaption style="text-align: center;">Image Test</figcaption>
+            </figure>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <figure>
+              <img src="../../../img/banner2.jpg" alt="Background" width="250" height="200">
+              <figcaption>Background</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div id="field" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>fieldset</span>&gt; dan &lt;<span>legend</span>&gt;</h3>
+          <p>
+            Tag ini sebenernya untuk bantuan tag &lt;form&gt; dan lebih jelasnya langsung cek aja sendiri atau lihat outputnya dibawah ini.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <form>
+              <fieldset>
+                <legend>Personal Info</legend> <br>
+                First Name : <input type="text"> <br>
+                Last Name : <input type="text"> <br>
+            </fieldset>
+            </form>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <form>
+              <fieldset>
+                <legend>Personal Info</legend> <br>
+                First Name : <input type="text"> <br>
+                Last Name : <input type="text"> <br>
+            </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="iframe" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>iframe</span>&gt;</h3>
+          <p>
+            Tag ini digunakan untuk menampilkan file didalam website, lebih jelasnya lihat langsung aja outputnya. Contoh dibawah ini menggunakan file lokal, maka hasilnya seperti itu.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <iframe src="test.html" frameborder="1"></iframe>
+          </xmp>
+          <xmp>
+            <a href="test.html" target="myFrame">iframe</a> <br>
+            <iframe name="myFrame" frameborder="1"></iframe>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya 1:</h3>
+          <div class="output line">
+            <iframe src="iframe.html" frameborder="1"></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Outputnya 2:</h3>
+          <div class="output line">
+            <a href="iframe.html" target="myFrame">iframe</a> <br>
+            <iframe name="myFrame" frameborder="1"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div id="audio" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>audio</span>&gt; dan &lt;<span>source</span>&gt;</h3>
+          <p>
+            Tag yang digunakan untuk memutar musik didalam website atau untuk mendengarkan lagu lagu yang di putar. Extension-nya bisa <mark>mp3</mark>, <mark>ogg</mark>, <mark>wav</mark> dan <mark>mpeg</mark>.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <audio controls>
+              <source src="audio.mp3" type="audio/mp3">
+            </audio>
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <audio controls loop>
+              <source src="jar.mpeg" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+
+      <div id="video" class="content">
+        <div class="col">
+          <h3>Tag &lt;<span>video</span>&gt; dan &lt;<span>embed</span>&gt;</h3>
+          <p>
+            Keduanya digunakan untuk menampilkan sebuah video. Tag ini mempunyai atribut seperti <mark>autoplay</mark>, <mark>controls</mark>, <mark>loop</mark>, <mark>muted</mark>, <mark>preload</mark>, <mark>src</mark>, <mark>poster</mark>, <mark>width</mark> dan <mark>height</mark>.
+          </p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <p>
+              Atribut <mark>autoplay</mark> untuk memulai video saat pertama kali membuka web <br> Atribut <mark>controls</mark> untuk menampilkan kontrol video <br> Atribut <mark>loop</mark> untuk mengulang video tanpa henti <br> Atribut <mark>muted</mark> untuk memuted suara video <br> Atribut <mark>poster</mark> untuk merubah thumbnail video menjadi objek lainnya <br> 
+            </p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <xmp>
+            <video controls width="500px" height="500px" loop>
+              <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <embed src="video.mp4" type="video/mp4" width="250px" height="200px">
+          </xmp>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output line">
+            <video controls width="500px" height="500px" loop>
+              <source src="cou.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </article>
