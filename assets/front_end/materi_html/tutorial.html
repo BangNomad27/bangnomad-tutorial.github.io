@@ -567,30 +567,42 @@
           <p>
             Buatlah form dibawah ini dengan bantuan &lt;table&gt;.
           </p>
-          <table border="0" cellspacing="0" cellpadding="3" class="form-lat">
+          <table border="0" cellspacing="0" cellpadding="0" class="form-lat">
 						<tr>
-							<th><label for="Nama">Nama:</label></th>
-							<th><input type="text" id="Nama"></th>
+							<th><label for="nama">Nama</label></th>
+							<th><input type="text" id="nama"></th>
+						</tr>
+            <tr>
+							<th><label for="email">Email</label></th>
+							<th><input type="email" id="email"></th>
 						</tr>
 						<tr>
-							<th><label for="password">Password:</label></th>
-							<th><input type="password" id="password"></th>
+							<th><label for="pw">Password</label></th>
+							<th><input type="password" id="pw"></th>
+						</tr>
+            <tr>
+							<th><label for="id">Nomor ID</label></th>
+							<th><input type="number" min="0" max="5" id="id"></th>
 						</tr>
 						<tr>
 							<th colspan="2">
-								<label for="pria">Pria</label><input type="radio" id="pria" name="jeniskelamin">
-								<label for="wanita">Wanita</label><input type="radio" id="wanita" name="jeniskelamin">
+								<label for="pria" style="padding-right: 5px;">Pria</label><input type="radio" id="pria" name="jeniskelamin">
+								<label for="wanita" style="padding-right: 5px;">Wanita</label><input type="radio" id="wanita" name="jeniskelamin">
 							</th>
 						</tr>
 						<tr>
 							<th colspan="2">
-								<label for="menulis">Menulis</label><input type="checkbox" id="menulis">
-								<label for="ngoding">Ngoding</label><input type="checkbox" id="ngoding">
-								<label for="membaca">Membaca</label><input type="checkbox" id="membaca">
+								<label for="menulis" style="padding-right: 5px;">FrontEnd</label><input type="checkbox" id="menulis">
+								<label for="ngoding" style="padding-right: 5px;">BackEnd</label><input type="checkbox" id="ngoding">
+								<label for="membaca" style="padding-right: 5px;">Full Stack</label><input type="checkbox" id="membaca">
 							</th>
 						</tr>
+            <tr>
+              <th><input type="date"></th>
+              <th><input type="time"></th>
+            </tr>
 						<tr>
-							<th>Tempat Lahir:</th>
+							<th>Tempat Lahir</th>
 							<th>
 								<select>
 									<option>Jakarta</option>
@@ -599,11 +611,24 @@
 								</select>
 							</th>
 						</tr>
+            <tr>
+              <th><label for="warna">Warna Kesukaan</label></th>
+              <th><input type="color" id="warna"></th>
+            </tr>
+            <tr>
+              <th><label for="bi">Bahasa Inggris</label></th>
+              <th><input type="range" min="0" max="100" id="bi"></th>
+            </tr>
+            <tr>
+              <th colspan="2"><input type="file" accept="image/*"></th>
+            </tr>
 						<tr>
-							<th colspan="2"><textarea placeholder="COMMENT..."></textarea></th>
+              <th><label for="komen">Alasan</label></th>
+							<th><textarea id="komen"></textarea></th>
 						</tr>
-						<tr class="tr">
-							<th colspan="2" style="text-align: center;"><button type="submit">Kirim!</button></th>
+						<tr>
+							<th style="text-align: right;"><button type="submit">Submit</button></th>
+              <th><button type="reset">Reset</button></th>
 						</tr>
 					</table>
         </div>

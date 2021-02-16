@@ -245,9 +245,6 @@ article {
 }
 
 @media screen and (max-width: 991px) {
-  section {
-    /* padding: 50px; */
-  }
   /* ! Button Home */
   .btn-home {
     bottom: 70px;
@@ -277,6 +274,6 @@ article {
     font-size: 16px;
   }
   .started, article {
-    padding: 0;
+    padding: 0 20px;
   }
 }
