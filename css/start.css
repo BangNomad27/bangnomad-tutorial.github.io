@@ -553,7 +553,10 @@ footer .copy {
     transform: translateX(0);
     padding-bottom: 20px;
   }
+  .content-left {
+    padding: 0;
+  }
   .content-left p {
-    padding: 10px 0;
+    padding: 10px 0 15px;
   }
 }
