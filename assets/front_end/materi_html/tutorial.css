@@ -245,6 +245,30 @@ article {
 }
 
 @media screen and (max-width: 991px) {
+  section {
+    padding: 50px 20px;
+  }
+  /* ! Button Home */
+  .btn-home {
+    bottom: 70px;
+  }
+  .btn-home .home .bx {
+    font-size: 30px;
+  }
+  nav {
+    padding: 20px 100px;
+  }
+  .container .started {
+    margin: 50px 50px;
+  }
+  aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
+    padding: 50px 0;
+  }
   /* ! Button Home */
   .btn-home {
     bottom: 70px;
@@ -253,16 +277,16 @@ article {
   .btn-home .home .bx {
     font-size: 20px;
   }
-  .container .started {
-    margin: 50px 50px;
+  /* ! Navbar */
+  nav {
+    padding: 20px 20px;
   }
-  nav, aside {
-    display: none;
+  nav .brand {
+    font-size: 22px;
   }
-}
-@media screen and (max-width: 600px) {
-  section {
-    padding: 50px 0;
+  nav .btn-back {
+    padding: 7px 10px;
+    font-size: 13px;
   }
   .container .started {
     margin: 50px 0;

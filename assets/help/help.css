@@ -100,8 +100,11 @@ header .nav ul {
   justify-content: center;
   align-items: center;
 }
-header ul li:not(last-child) {
+header ul li {
   margin-right: 35px;
+}
+header ul li:last-child {
+  margin-right: 0;
 }
 header ul li a {
   color: #2196f3;
@@ -179,6 +182,18 @@ article .box .cardBx {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #2196f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .box .cardBx h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #fff;
 }
 article .box .cardTxt {
   position: absolute;
@@ -194,14 +209,6 @@ article .box .cardTxt a {
   width: 100%;
   height: 100%;
   display: block;
-  line-height: 235px;
-  background-color: #00a8ff;
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #fff;
   border-radius: 10px;
   border: 5px solid #111;
 }
@@ -218,5 +225,57 @@ article .box .txt h3 {
 }
 #disabled {
   pointer-events: none;
-  background-color: #d44;
+}
+
+@media screen and (max-width: 991px) {
+  section {
+    padding: 50px 50px;
+  }
+  /* ! Button Home */
+  .btn-home {
+    bottom: 100px;
+  }
+  .btn-home .home .bx {
+    font-size: 30px;
+  }
+  header {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  nav {
+    padding: 20px 100px;
+  }
+  .container {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
+    padding: 50px 20px;
+  }
+  /* ! Button Home */
+  .btn-home {
+    bottom: 70px;
+	  right: 30px;
+  }
+  .btn-home .home .bx {
+    font-size: 20px;
+  }
+  /* ! Navbar */
+  nav {
+    padding: 20px 20px;
+  }
+  nav .brand {
+    font-size: 22px;
+  }
+  nav .btn-back {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+  header ul li {
+    margin-right: 20px;
+  }
 }
