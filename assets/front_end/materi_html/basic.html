@@ -15,11 +15,12 @@
       padding: 0;
       font-family: arial, sans-serif;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     li {
       list-style: none;
     }
-    span {
+    span.default {
       color: #d44;
     }
     dd {
@@ -222,11 +223,24 @@
   <!-- ! Section - Start -->
   <section id="basic" class="basic">
     <div class="basicBx">
+      <h2>Started Template</h2>
+      <pre class="hljs" style="display: block; overflow-x: auto; padding: 1em; background: rgb(253, 246, 227); color: rgb(101, 123, 131);"><span class="xml"><span class="hljs-meta" style="color: rgb(203, 75, 22);">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">html</span> <span class="hljs-attr" style="color: rgb(181, 137, 0);">lang</span>=<span class="hljs-string" style="color: rgb(42, 161, 152);">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">head</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">meta</span> <span class="hljs-attr" style="color: rgb(181, 137, 0);">charset</span>=<span class="hljs-string" style="color: rgb(42, 161, 152);">"UTF-8"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">meta</span> <span class="hljs-attr" style="color: rgb(181, 137, 0);">name</span>=<span class="hljs-string" style="color: rgb(42, 161, 152);">"viewport"</span> <span class="hljs-attr" style="color: rgb(181, 137, 0);">content</span>=<span class="hljs-string" style="color: rgb(42, 161, 152);">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">title</span>&gt;</span>Started Template | BangNomad<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(38, 139, 210);">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(38, 139, 210);">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">body</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(38, 139, 210);">h1</span>&gt;</span>Hello Buddy, let's Code.<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(38, 139, 210);">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(38, 139, 210);">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(38, 139, 210);">html</span>&gt;</span></span></pre>
+
       <h2>Tag dan Atribut di HTML</h2>
       <fieldset>
         <legend>Tag yang sering digunakan</legend>
         <dl>
-          <dt>*- &lt;<span>div</span>&gt; dan &lt;<span>span</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">div</span>&gt; dan &lt;<span class="default">span</span>&gt;</dt>
           <dd>
             Kedua tag itu tidak memiliki arti apa apa hanya di gunakan untuk mengelompokkan tag tag HTML di dalamnya, dan tag tersebut disebut <mark>parent-nya</mark>.
           </dd>
@@ -239,19 +253,19 @@
       <fieldset>
         <legend>Tag dasar terpenting yang harus diketahui</legend>
         <dl>
-          <dt>*- &lt;<span>html</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">html</span>&gt;</dt>
           <dd>Ialah tag pembuka saat melakukan coding</dd>
-          <dt>*- &lt;<span>title</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">title</span>&gt;</dt>
           <dd>Ialah tag untuk rename judul titel halaman web</dd>
-          <dt>*- &lt;<span>style</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">style</span>&gt;</dt>
           <dd>Ialah tag untuk menuliskan CSS secara internal</dd>
-          <dt>*- &lt;<span>meta</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">meta</span>&gt;</dt>
           <dd>Ialah tag metadata dokumen pada HTML</dd>
-          <dt>*- &lt;<span>head</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">head</span>&gt;</dt>
           <dd>Ialah tag bagian atas (kepala) dari coding</dd>
-          <dt>*- &lt;<span>body</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">body</span>&gt;</dt>
           <dd>Ialah tag bagian badannya untuk menuliskan codenya</dd>
-          <dt>*- &lt;<span>script</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">script</span>&gt;</dt>
           <dd>Ialah tag untuk menuliskan script Javascript secara internal</dd>
         </dl>
       </fieldset>
@@ -316,49 +330,49 @@
       <fieldset>
         <legend>Tag - tag baru di HTML 5</legend>
         <dl>
-          <dt>*- &lt;<span>article</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">article</span>&gt;</dt>
           <dd>Mendefinisikan sebuah artikel</dd>
-          <dt>*- &lt;<span>aside</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">aside</span>&gt;</dt>
           <dd>Mendefinisikan sebuah konten selain dari konten utama</dd>
-          <dt>*- &lt;<span>bdi</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">bdi</span>&gt;</dt>
           <dd>Mendefinisikan sebuah bagian dari teks yang mungkin di format dalam arah yang berbeda dari teks lainnya</dd>
-          <dt>*- &lt;<span>details</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">details</span>&gt;</dt>
           <dd>Mendefinisikan rincian tambahan bahwa pengguna dapat melihat atau menyembunyikan konten</dd>
-          <dt>*- &lt;<span>dialog</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">dialog</span>&gt;</dt>
           <dd>Mendefinisikan sebuah kotak dialog atau jendela dialog</dd>
-          <dt>*- &lt;<span>figcaption</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">figcaption</span>&gt;</dt>
           <dd>Mendefinisikan sebuah caption untuk tag &lt;figure&gt;</dd>
-          <dt>*- &lt;<span>figure</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">figure</span>&gt;</dt>
           <dd>Menentukan konten mandiri, seperti ilustrasi, diagram, foto, daftar kode, dan lain lain</dd>
-          <dt>*- &lt;<span>footer</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">footer</span>&gt;</dt>
           <dd>Mendefinisikan sebuah footer untuk dokumen atau bagian bawah website</dd>
-          <dt>*- &lt;<span>header</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">header</span>&gt;</dt>
           <dd>Menentukan header untuk dokumen atau bagian tertentu</dd>
-          <dt>*- &lt;<span>main</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">main</span>&gt;</dt>
           <dd>Menentukan isi/konten utama pada sebuah dokumen</dd>
-          <dt>*- &lt;<span>mark</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">mark</span>&gt;</dt>
           <dd>Menandai teks konten yang di anggap penting</dd>
-          <dt>*- &lt;<span>menuitem</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">menuitem</span>&gt;</dt>
           <dd>Mendefinisikan item perintah atau menu bahwa pengguna dapat memanggil dari menu popup</dd>
-          <dt>*- &lt;<span>meter</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">meter</span>&gt;</dt>
           <dd>Mendefinisikan pengukuran skalar dalam kisaran yang dikenal (agauge)</dd>
-          <dt>*- &lt;<span>nav</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">nav</span>&gt;</dt>
           <dd>Mendefisinikan list navigasi atau disebut juga navbar</dd>
-          <dt>*- &lt;<span>progress</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">progress</span>&gt;</dt>
           <dd>Mendefinisikan seperti bar loadings atau digunakan juga untuk loading pen-download-an</dd>
-          <dt>*- &lt;<span>ruby</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">ruby</span>&gt;</dt>
           <dd>Mendefinisikan sebuah ruby penjelasan (untuk tipografi Asia Timur)</dd>
-          <dt>*- &lt;<span>rp</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">rp</span>&gt;</dt>
           <dd>Mendefinisikan apa yang harus ditampilkan di browser yang tidak mendukung &lt;ruby&gt; penjelasan</dd>
-          <dt>*- &lt;<span>rt</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">rt</span>&gt;</dt>
           <dd>Mendefinisikan sebuah penjelasan atau pengucapan karakter (untuk tipografi Asia Timur)</dd>
-          <dt>*- &lt;<span>section</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">section</span>&gt;</dt>
           <dd>Mendefinisikan sebuah bagian dalam sebuah dokumen</dd>
-          <dt>*- &lt;<span>summary</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">summary</span>&gt;</dt>
           <dd>Mendefinisikan sebuah judul terlihat untuk tag &lt;details&gt;</dd>
-          <dt>*- &lt;<span>time</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">time</span>&gt;</dt>
           <dd>Mendefinisikan tanggal dan waktu</dd>
-          <dt>*- &lt;<span>wbr</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">wbr</span>&gt;</dt>
           <dd>Mendefinisikan sebuah kemungkinan garis-break</dd>
         </dl>
       </fieldset>
@@ -366,11 +380,11 @@
       <fieldset>
         <legend>Tag baru (HTML 5) untuk &lt;form&gt;</legend>
         <dl>
-          <dl>*- &lt;<span>datalist</span>&gt;</dl>
+          <dl>*- &lt;<span class="default">datalist</span>&gt;</dl>
           <dd>Mendefinisikan pilihan yang telah ditentukan untuk kontrol input</dd>
-          <dl>*- &lt;<span>keygen</span>&gt;</dl>
+          <dl>*- &lt;<span class="default">keygen</span>&gt;</dl>
           <dd>Mendefinisikan bidang kunci-pasangan generator (for forms)</dd>
-          <dl>*- &lt;<span>output</span>&gt;</dl>
+          <dl>*- &lt;<span class="default">output</span>&gt;</dl>
           <dd>Mendefinisikan hasil perhitungan</dd>
         </dl>
       </fieldset>
@@ -378,9 +392,9 @@
       <fieldset>
         <legend>Tag baru (HTML 5) untuk Grafik</legend>
         <dl>
-          <dt>*- &lt;<span>canvas</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">canvas</span>&gt;</dt>
           <dd>Mendefinisikan gambar grafis menggunakan javascript</dd>
-          <dt>*- &lt;<span>svg</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">svg</span>&gt;</dt>
           <dd>Mendefinisikan gambar grafis menggunakan SVG</dd>
         </dl>
       </fieldset>
@@ -388,15 +402,15 @@
       <fieldset>
         <legend>Tag baru (HTML 5) untuk media</legend>
         <dl>
-          <dt>*- &lt;<span>audio</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">audio</span>&gt;</dt>
           <dd>Mendefinisikan sebuah suara atau musik</dd>
-          <dt>*- &lt;<span>embed</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">embed</span>&gt;</dt>
           <dd>Mendefinisikan wadah untuk aplikasi eksternal (like plug-ins)</dd>
-          <dt>*- &lt;<span>source</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">source</span>&gt;</dt>
           <dd>Mendefinisikan sumber untuk &lt;video&gt; dan &lt;audio&gt;</dd>
-          <dt>*- &lt;<span>track</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">track</span>&gt;</dt>
           <dd>Mendefinisikan lagu untuk &lt;video&gt; dan &lt;audio&gt;</dd>
-          <dt>*- &lt;<span>video</span>&gt;</dt>
+          <dt>*- &lt;<span class="default">video</span>&gt;</dt>
           <dd>Mendefinisikan video atau film konten</dd>
         </dl>
       </fieldset>
