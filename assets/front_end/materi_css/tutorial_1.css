@@ -13,6 +13,9 @@ section {
   width: 100%;
   padding: 50px 100px;
 }
+dd {
+  padding-left: 20px;
+}
 /* ! Button Home */
 .btn-home {
 	position: fixed;

@@ -47,16 +47,8 @@
         <ul>
           <li><a href="#font">Fonts</a></li>
           <li><a href="#text">Texts</a></li>
-          <li><a href="#bg">Background</a></li>
+          <li><a href="#bg">Background & Color</a></li>
           <li><a href="#sudoClas">Pseudo-Class</a></li>
-        </ul>
-
-        <h4 style="margin-left: 15%;"><a href="#h2-2">Box Model</a></h4>
-        <ul>
-          <li><a href="#margin">Margin</a></li>
-          <li><a href="#padding">Padding</a></li>
-          <li><a href="#border">Border</a></li>
-          <li><a href="#konten">Content</a></li>
         </ul>
 
         <h4><a href="#h2-3">Property CSS 2</a></h4>
@@ -66,6 +58,14 @@
           <li><a href="#float">Float</a></li>
           <li><a href="#position">Position</a></li>
           <li><a href="#zindex">Z-index</a></li>
+        </ul>
+
+        <h4 style="margin-left: 15%;"><a href="#h2-2">Box Model</a></h4>
+        <ul>
+          <li><a href="#margin">Margin</a></li>
+          <li><a href="#padding">Padding</a></li>
+          <li><a href="#border">Border</a></li>
+          <li><a href="#konten">Content</a></li>
         </ul>
 
         <h4 style="margin-left: 5%;"><a href="#h2-4">Quick Tip</a></h4>
@@ -145,7 +145,7 @@
         <!-- * Font Variant -->
         <div class="col">
           <h3 class="h3">*- <span class="span">Font Variant</span></h3>
-          <p>Digunakan untuk membuat huruf menjadi capital walaupun teks default ga capital. Nilainya: <mark>small-caps</mark></p>
+          <p>Digunakan untuk membuat huruf menjadi capital walaupun teks default ga capital. Nilainya: <mark>normal</mark>, <mark>small-caps</mark>, <mark>inherit</mark> dan <mark>unset</mark></p>
         </div>
         <div class="col">
           <h3>Kodenya:</h3>
@@ -154,8 +154,108 @@
         <div class="col">
           <h3>Outputnya:</h3>
           <div class="output" style="height: 0%;">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, distinctio.</p>
+            <p style="font-variant: small-caps;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, distinctio.</p>
           </div>
+        </div>
+        <div class="col">
+          <p>Masih banyak lagi property font lainnya seperti: <mark>font-kerning</mark>, <mark>font-stretch</mark>, <mark>font-synthesis</mark> dan lain lain.</p>
+        </div>
+      </div>
+
+      <div id="text" class="content">
+        <!-- * Text Align -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Text Align</span></h3>
+          <p>Digunakan untuk menentukan kerataan fontnya. Nilainya: <mark>left</mark>, <mark>center</mark>, <mark>right</mark> dan <mark>justify</mark></p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-align</span>: left; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-align</span>: center; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-align</span>: right; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="text-align: left;">Rata Kiri</p>
+            <p style="text-align: center;">Rata Tengah</p>
+            <p style="text-align: right;">Rata Kanan</p>
+          </div>
+        </div>
+        <!-- * Text Indent -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Text Indent</span></h3>
+          <p>Digunakan untuk memberi ruang kosong diawal paragraf seperti menggunakan simbol <xmp style="font-size: 18px;">&nbsp;</xmp></p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-indent</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">20px</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="text-indent: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, odio qui quos incidunt fugiat nihil impedit, a dolor consectetur, provident mollitia. Odit quasi expedita in iste eius dolor ipsa quam.</p>
+          </div>
+        </div>
+        <!-- * Text Decoration -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Text Decoration</span></h3>
+          <p>Digunakan untuk mendekorasi sebuah teks dengan menambahkan sebuah garis pada teksnya. Nilainya: <mark>none</mark>, <mark>underline</mark>, <mark>overline</mark> dan <mark>line-through</mark></p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-decoration</span>: underline; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-decoration</span>: overline; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-decoration</span>: line-through; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p><span style="text-decoration: underline;">Underline</span>, <span style="text-decoration: overline;">Overline</span> dan <span style="text-decoration: line-through;">Line-Through</span></p>
+          </div>
+        </div>
+        <!-- * Text Transform -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Text Transform</span></h3>
+          <p>Digunakan untuk membuat gaya pada fontnya. Nilainya: <mark>none</mark> <mark>lowercase</mark>, <mark>uppercase</mark>, dan <mark>capitalize</mark></p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-transform</span>: lowercase; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-transform</span>: uppercase; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-transform</span>: capitalize; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p>LOWERCASE = <span style="text-transform: lowercase;">LOWERCASE</span>, uppercase = <span style="text-transform: uppercase;">uppercase</span> dan capitalize = <span style="text-transform: capitalize;">capitalize</span></p>
+          </div>
+        </div>
+        <div class="col">
+          <p>Masih banyak lagi property lainnya seperti: <mark>text-anchor</mark>, <mark>text-shadow</mark>, <mark>text-rendering</mark>, <mark>text-overflow</mark>, <mark>text-orientation</mark> dan lain lain.</p>
+        </div>
+      </div>
+
+      <div id="bg" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Background dan Color</span></h3>
+          <p>Kedua property ini digunakan untuk memberikan warna, property background untuk mewarna halamannya sedangkan property color untuk mewarna teksnya. Tapi untuk property background saya ga tampilkan outputnya hanya kodenya aja biar bisa di copy dan dicoba</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Beberapa property untuk <mark>background</mark>, yaitu:</dt>
+              <dd>
+                *- <b>background-color</b> nilainya: nama warna | hexa-desimal | rgb() | rgba() | hsla()<br>
+                *- <b>background-image</b> nilainya: url() | linear/radial-gradient <br>
+                *- <b>background-size</b> nilainya: count manually | cover <br>
+                *- <b>background-repeat</b> nilainya: no-repeat <br>
+                *- <b>background-position</b> nilainya: count manually
+              </dd><br>
+              <dt>Untuk property <mark>color</mark> sama seperti background-color nilainya:</dt>
+              <dd>*- <b>color</b> nilainya: nama warna | hexa-desimal | rgb() | rgba() | hsla()</dd>
+            </dl>
+            <p>Count Manually ialah hitungnya secara manual <mark>0 0;</mark> angka pertama horizontal dan angka kedua vertikal. Selebihnya lihat di kodenya</p>
+          </details>
         </div>
       </div>
     </article>
