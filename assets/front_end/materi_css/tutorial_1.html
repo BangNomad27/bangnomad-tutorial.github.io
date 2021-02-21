@@ -33,7 +33,7 @@
     <div class="started">
       <h2>Mulai</h2>
       <p>
-        <b>Apa itu selector?</b> Selector adalah namaTag di HTML yang dipanggil namaTagnya dan disebutlah sebagai selector dan selector bisa juga dipanggil dengan nama kelas atau id didalam namaTag tersebut.
+        <b>Apa itu selector?</b> Selector adalah namaTag di HTML yang dipanggil namaTagnya dan disebutlah sebagai selector dan selector bisa juga dipanggil dengan nama kelas atau id didalam namaTag tersebut. Dan dibawah ini adalah syntax CSS secara eksternal file.
       </p>
     </div>
   </div>
@@ -239,22 +239,102 @@
       <div id="bg" class="content">
         <div class="col">
           <h3 class="h3">*- <span class="span">Background dan Color</span></h3>
-          <p>Kedua property ini digunakan untuk memberikan warna, property background untuk mewarna halamannya sedangkan property color untuk mewarna teksnya. Tapi untuk property background saya ga tampilkan outputnya hanya kodenya aja biar bisa di copy dan dicoba</p>
+          <p>Kedua property ini digunakan untuk memberikan warna terhadap elemennya.</p>
           <details>
             <summary>Selengkapnya</summary>
             <dl>
-              <dt>Beberapa property untuk <mark>background</mark>, yaitu:</dt>
+              <dt>Beberapa property untuk <mark>background</mark>, yaitu: <br> *- background-color</dt>
+              <dd>Untuk memberikan warna pada halaman / background webnya. Nilainya: <mark>nama warna</mark>, <mark>hexa-desimal</mark> dan <mark>rgb()</mark></dd>
+              <dt>*- background-image</dt>
+              <dd>Untuk memberikan sebuah gambar pada backgroundnya. Nilainya: <mark>url()</mark>, <mark>linear-gradient</mark> dan <mark>radial-gradient</mark></dd>
+              <dt>*- background-size:</dt>
+              <dd>Untuk menentukan ukuran gambarnya. Nilainya: <mark>count manually</mark> dan <mark>cover</mark></dd>
+              <dt>*- background-repeat</dt>
+              <dd>Untuk menentukan gambarnya berulang kali atau single image. Nilainya: <mark>no-repeat</mark></dd>
+              <dt>*- background-position</dt>
+              <dd>Untuk menentukan posisi gambarnya. Nilainya: <mark>count manually</mark>, <mark>left</mark>, <mark>right</mark> dan <mark>center</mark></dd>
+              <dt>Count manually adalah nilai yang diatur manual oleh programmernya, terdapat dua nilai, nilai pertama untuk menentukan nilai secara horizontal sedangkan nilai kedua untuk menentukan nilai secara vertikal. Dan masih ada beberapa property lainnya seperti: <mark>background-clip</mark>, <mark>background-attachment</mark>, <mark>background-blend-mode</mark> dan <mark>background-origin</mark></dt> <br>
+              <dt>Untuk property <mark>color</mark> sama seperti background-color nilainya: <br> *- color</dt>
+              <dd>Untuk memberikan warna pada teksnya. Nilainya: <mark>nama warna</mark>, <mark>hexa-desimal</mark>, <mark>rgb()</mark>, <mark>rgba()</mark> dan <mark>hsla()</mark></dd>
+              <dt>Lalu cara pemanggilan warnanya, yaitu:</dt>
               <dd>
-                *- <b>background-color</b> nilainya: nama warna | hexa-desimal | rgb() | rgba() | hsla()<br>
-                *- <b>background-image</b> nilainya: url() | linear/radial-gradient <br>
-                *- <b>background-size</b> nilainya: count manually | cover <br>
-                *- <b>background-repeat</b> nilainya: no-repeat <br>
-                *- <b>background-position</b> nilainya: count manually
-              </dd><br>
-              <dt>Untuk property <mark>color</mark> sama seperti background-color nilainya:</dt>
-              <dd>*- <b>color</b> nilainya: nama warna | hexa-desimal | rgb() | rgba() | hsla()</dd>
+                *- nama warna: red; | green; | blue; <br>
+                *- hexa-desimal: #ff0000; | #008000; | #0000ff; <br>
+                *- rgb(): rgb(255,0,0); | rgb(0,0,255); | rgb(0,128,0);
+              </dd>
             </dl>
-            <p>Count Manually ialah hitungnya secara manual <mark>0 0;</mark> angka pertama horizontal dan angka kedua vertikal. Selebihnya lihat di kodenya</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kode property background:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: red; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">url</span>(image.png); }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-size</span>: cover; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-repeat</span>: no-repeat; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-position</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">100px</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Kode property color:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: red; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#008000</span>; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">rgb</span>(0,128,0); }</pre>
+        </div>
+        <div class="col">
+          <h3>Output color dan background-color aja:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="color: red;">Lorem ipsum, <span style="background-color: #2196f3; color: #000;">dolor sit amet</span> consectetur adipisicing elit. Dolore, magnam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sudoClas" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Pseudo-Class</span></h3>
+          <p>Pseudo-class sangat penting untuk CSS, pseudo-class juga bisa diartikan sebagai simbol pada selector. Berikut, beberapa simbol pada selectornya:</p>
+        </div>
+        <!-- * * -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">*</span></h3>
+          <p>Simbol bintang (*) ini digunakan untuk mengubah keseluruhan elemen pada CSS dan hati hati ketika menggunakan simbol ini, karena bisa dibilang sebagai <mark>CSS Reset</mark> dan biasanya juga margin dan padding yang di reset.</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);">* {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">margin</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">padding</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+}</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * #x -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">#x</span></h3>
+          <p>Simbol pagar (#) ini digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>id</mark>. Namun ketika ingin menggunakan simbol ini hati hati, karena nilai spesificity atribut id sangat besar.</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-id" style="color: rgb(230, 219, 116);">#container</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#f1f2f6</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#111</span>;
+}</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * .x -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">.x</span></h3>
+          <p>Simbol titik (.) ini digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>class</mark>.</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.container</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#333</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#fff</span>;
+}</pre>
+            </div>
           </details>
         </div>
       </div>
