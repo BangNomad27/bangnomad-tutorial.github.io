@@ -151,13 +151,13 @@ article {
 .content .col span.span {
   color: #2196f3;
 }
-.content .col p, .content .ls-line p {
+.content .col p, .content .col .ls-line p {
   font-size: 18px;
   text-align: justify;
 }
 .content .col details summary {
   margin-top: 3px;
-  color: #2196f3;
+  color: #6dace0;
   outline: none;
   cursor: pointer;
 }
@@ -178,10 +178,188 @@ article {
   border: 2px solid #333;
   padding: 20px;
 }
+/* * Materi Pseudo-Class */
+.col .output .p1:hover {
+  color: #2196f3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.col .output .p2 {
+  display: inline;
+  cursor: pointer;
+}
+.col .output .p2:active {
+  color: red;
+  font-style: italic;
+} 
+.col .output .ul1 + .p3 {
+  color: coral;
+}
+.col .output .ul2 ~ p {
+  color: #d44;
+}
+.col .output p span[id=spanID] {
+  color: blueviolet;
+}
+.col .output .ul3 li, .col .output .ul4 li, .col .output .ul5 li {
+  display: inline;
+  margin-left: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.col .output .ul3 li:first-child, .col .output .ul4 li:last-child, .col .output .ul5 li:nth-child(2n+1) {
+color: #f05d75;
+}
+.col .output input[id=btn]:checked + label {
+  color: blueviolet;
+  text-transform: uppercase;
+}
+.col .output input[id=focus] {
+	width: 200px;
+	background-color: transparent;
+	padding: 11px 7px;
+	text-align: center;
+  font-size: 18px;
+	border: 2px solid royalblue;
+	border-radius: 30px;
+	outline: none;
+	transition: .2s;
+}
+.col .output input[id=focus]:focus {
+  width: 280px;
+  border-color: limegreen;
+}
+.col .output.not div:not(#content2) {
+  color: tomato;
+}
+/* * Materi Overflow */
+.col .output .par1, .col .output .par2, .col .output .par3 {
+  width: 200px;
+  height: 150px;
+  background-color: violet;
+}
+.col .output .par1 {
+  overflow: auto;
+}
+.col .output .par2 {
+  overflow: hidden;
+  line-height: 20px;
+}
+.col .output .par3 {
+  overflow: scroll;
+}
+/* * Materi Float */
+.col .output .kotak {
+  background-color: limegreen;
+  padding: 20px;
+}
+.col .output .kotak .kotakImg {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+/* * Materi Position */
+.col .output .box {
+  width: 150px;
+  height: 100px;
+  border: 1px solid #333;
+}
+.col .output .box.box1 { background-color: #ff0000; }
+.col .output .box.box2 { background-color: #008000; }
+.col .output .box.box3 { background-color: #0000ff; }
+/* * Materi Z-index */
+.col .output .box.satu {
+  background-color: #f00;
+  z-index: 1;
+}
+.col .output .box.dua {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  background-color: #080;
+  z-index: 2;
+}
+.col .output .box.tiga {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  background-color: #00f;
+}
+/* * Materi Box Model */
+.col .output .boxM {
+  width: 200px;
+  background-color: tomato;
+  margin: 25px auto;
+}
+.col .output .boxP {
+  width: 200px;
+  background-color: violet;
+  padding: 20px;
+}
+.col .output .boxB {
+  display: flex;
+}
+.col .output .boxB div {
+  width: 200px;
+  height: 100px;
+  background-color: lime;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col .output .boxB .solidBx { border: 5px solid #111;}
+.col .output .boxB .dottedBx { border: 5px dotted #111;}
+.col .output .boxB .dashedBx { border: 5px dashed #111;}
+.col .output .boxB .doubleBx { border: 5px double #111;}
+/* * Materi Pseudo-Element */
+.col .output #target1:target { background-color: tomato; }
+.col .output #target2:target { background-color: pink; }
+/* * Materi Before After */
+.col .output .beaf1::before { content: 'Hi, '; }
+.col .output .beaf1::after { content: ' World!'; }
+.col .output .beaf2 {
+  width: 200px;
+  height: 200px;
+  background-color: #080;
+  position: relative;
+  border: 1px solid #333;
+}
+.col .output .beaf2::before, .col .output .beaf2::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 1px dashed #333;
+}
+.col .output .beaf2::before {
+  top: -15px;
+  left: -15px;
+  background-color: #f00;
+}
+.col .output .beaf2::after {
+  bottom: -15px;
+  right: -15px;
+  background-color: #00f
+}
+/* ! Ini adalah Clear Float */
+/* ! Micro Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
 
 @media screen and (max-width: 991px) {
   section {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
   /* ! Button Home */
   .btn-home {
@@ -198,6 +376,9 @@ article {
   }
   aside {
     display: none;
+  }
+  .started, article {
+    padding: 0 50px;
   }
 }
 @media screen and (max-width: 600px) {

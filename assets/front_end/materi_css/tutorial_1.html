@@ -24,7 +24,7 @@
   <!-- ! Navbar - Start -->
   <nav id="home">
     <a href="tutorial_1.html" class="brand">Bang<span>Nomad</span></a>
-    <a href="../../../index.html#home" class="btn-back">Back to Menu</a>
+    <a href="../../../index.html#fe" class="btn-back">Back to Menu</a>
   </nav>
   <!-- ! Navbar - Finish -->
 
@@ -33,7 +33,7 @@
     <div class="started">
       <h2>Mulai</h2>
       <p>
-        <b>Apa itu selector?</b> Selector adalah namaTag di HTML yang dipanggil namaTagnya dan disebutlah sebagai selector dan selector bisa juga dipanggil dengan nama kelas atau id didalam namaTag tersebut. Dan dibawah ini adalah syntax CSS secara eksternal file.
+        <b>Apa itu selector?</b> Selector adalah namaTag di HTML yang dipanggil namaTagnya dan disebut sebagai <mark>selector</mark>. Selector bisa juga dipanggil dengan nama <mark>kelas</mark> atau <mark>id</mark> didalam namaTag tersebut dan pemanggilan menggunakan nama kelas atau id adalah <mark>pseudo-class</mark>.
       </p>
     </div>
   </div>
@@ -51,16 +51,16 @@
           <li><a href="#sudoClas">Pseudo-Class</a></li>
         </ul>
 
-        <h4><a href="#h2-3">Property CSS 2</a></h4>
+        <h4><a href="#h2-2">Property CSS 2</a></h4>
         <ul>
           <li><a href="#display">Display</a></li>
           <li><a href="#overflow">Overflow</a></li>
-          <li><a href="#float">Float</a></li>
+          <li><a href="#float">Float & Clear</a></li>
           <li><a href="#position">Position</a></li>
           <li><a href="#zindex">Z-index</a></li>
         </ul>
 
-        <h4 style="margin-left: 15%;"><a href="#h2-2">Box Model</a></h4>
+        <h4 style="margin-left: 15%;"><a href="#h2-3">Box Model</a></h4>
         <ul>
           <li><a href="#margin">Margin</a></li>
           <li><a href="#padding">Padding</a></li>
@@ -295,7 +295,7 @@
         <!-- * * -->
         <div class="col">
           <h3 class="h3">*- <span class="span">*</span></h3>
-          <p>Simbol bintang (*) ini digunakan untuk mengubah keseluruhan elemen pada CSS dan hati hati ketika menggunakan simbol ini, karena bisa dibilang sebagai <mark>CSS Reset</mark> dan biasanya juga margin dan padding yang di reset.</p>
+          <p>Simbol bintang (*) ini digunakan untuk mengubah keseluruhan elemen pada CSS dan hati hati ketika menggunakan simbol ini, karena bisa dibilang sebagai <mark>CSS Reset</mark> dan biasanya juga margin dan padding yang di reset</p>
           <details>
             <summary>Selengkapnya</summary>
             <div class="col">
@@ -310,7 +310,7 @@
         <!-- * #x -->
         <div class="col">
           <h3 class="h3">*- <span class="span">#x</span></h3>
-          <p>Simbol pagar (#) ini digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>id</mark>. Namun ketika ingin menggunakan simbol ini hati hati, karena nilai spesificity atribut id sangat besar.</p>
+          <p>Simbol pagar (#) digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>id</mark>. Namun ketika ingin menggunakan simbol ini hati hati, karena nilai spesificity atribut id sangat besar</p>
           <details>
             <summary>Selengkapnya</summary>
             <div class="col">
@@ -325,7 +325,7 @@
         <!-- * .x -->
         <div class="col">
           <h3 class="h3">*- <span class="span">.x</span></h3>
-          <p>Simbol titik (.) ini digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>class</mark>.</p>
+          <p>Simbol titik (.) digunakan untuk memberi style pada namaTag yang memiliki atribut <mark>class</mark></p>
           <details>
             <summary>Selengkapnya</summary>
             <div class="col">
@@ -336,6 +336,797 @@
 }</pre>
             </div>
           </details>
+        </div>
+        <!-- * x y -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x y</span></h3>
+          <p>Spasi digunakan menargetkan ke tujuan yang lebih spesifik</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-id" style="color: rgb(230, 219, 116);">#container</span> <span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.content</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">input</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">outline</span>: none;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border</span>: none;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">resize</span>: none;
+}</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * x, y -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x, y</span></h3>
+          <p>Simbol koma (,) digunakan untuk menargetkan selector yang ingin <mark>diubah</mark> lebih dari satu</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">table</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">form</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#eaeaea</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#333</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1px</span> solid <span class="hljs-number" style="color: rgb(174, 129, 255);">#111</span>;
+}</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * :hover -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:hover</span></h3>
+          <p>Hover digunakan untuk mengubah style pada saat kursor mengarah ke elemen yang diberikan <mark>hover-nya</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:hover</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#2196f3</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-decoration</span>: line-through;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <p class="p1">Hover Me</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * :active -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:active</span></h3>
+          <p>Active digunakan untuk mengubah style pada saat menekan elemen sembari ditahan kursornya, maka elemen yang diberi :active akan berubah</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:active</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: red;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">font-style</span>: italic;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <p class="p2">Click Me</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * :visited -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:visited</span></h3>
+          <p>Visited digunakan untuk mengubah style tag &lt;a&gt; setelah user kunjungi. Defaultnya akan berubah menjadi warna ungu dengan underline dan biasanya ga pernah diubah defaultnya. Jika mau merubahnya, kode selectornya seperti ini: <span style="color: rgb(249, 38, 114);">ul</span> <span style="color: rgb(249, 38, 114);">li</span> <span style="color: rgb(249, 38, 114);">a</span><span style="color: #ffd700;">:visited</span></p>
+        </div>
+        <!-- * x + y -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x + y</span></h3>
+          <p>Simbol tambah (+) digunakan untuk mengubah style dengan memilih elemen terdekat setelahnya dan mendahului elemen sebelumnya</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> + <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">p</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: coral; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <ul class="ul1" style="margin-left: 20px;">
+                  <li style="list-style: square;">Link 1</li>
+                  <li style="list-style: square;">Link 2</li>
+                  <li style="list-style: square;">Link 3</li>
+                </ul>
+                <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, pariatur.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * x > y -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x > y</span></h3>
+          <p>Simbol kurung siku (>) digunakan untuk menargetkan ke cabang selector secara langsung, dan cara kerja ini hampir sama seperti spasi, bedanya kegunaan simbol ini bermanfaat ketika bekerja dengan javascript berbasis <mark>CSS selector</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span> &gt; <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: red;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-decoration</span>: none;
+}</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * x ~ y -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x ~ y</span></h3>
+          <p>Simbol gelombang (~) digunakan untuk merubah elemen yang didahului setelah elemen sebelumnya, hal ini sama seperti simbol tambah (+). Tapi, simbol gelombang ini akan merubah semua Tag  yang sama setelahnya</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> ~ <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">p</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#d44</span>; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <ul class="ul2" style="margin-left: 20px;">
+                  <li style="list-style: square;">Link 1</li>
+                  <li style="list-style: square;">Link 2</li>
+                  <li style="list-style: square;">Link 3</li>
+                </ul>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, voluptatum!</p>
+                <span>span tester</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, voluptatum!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, voluptatum!</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * x[atribut=value] -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x[atribut=value]</span></h3>
+          <p>Simbol kurung persegi [] digunakan untuk mengubah style pada selector yang mempunyai atribut tertentu dan boleh ditambah sebuah nilai agar lebih spesifik</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">span</span><span class="hljs-selector-attr" style="color: rgb(230, 219, 116);">[id]</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: blueviolet; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau */</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">span</span><span class="hljs-selector-attr" style="color: rgb(230, 219, 116);">[id=spanID]</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: lightskyblue; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span id="spanID">Maxime vero blanditiis aut id dolorem architecto laudantium</span>, asperiores rerum voluptatibus eveniet molestias dignissimos natus vel consequatur!</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * :first-child -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:first-child</span></h3>
+          <p>First-child digunakan untuk mengatur style pada tag pertama atau sering disebut anak pertama</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:first-child</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#f05d75</span>; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <ul class="ul3">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * :last-child -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:last-child</span></h3>
+          <p>Last-child digunakan untuk mengatur style pada tag anak terakhir</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:last-child</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#f05d75</span>; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <ul class="ul4">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * :nth-child() -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">:nth-child()</span></h3>
+          <p>Nth-child() digunakan untuk mengatur style pada tag secara manual perhitungannya dengan sebuah nilai</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:nth-child(4)</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#f05d75</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau */</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:nth-child(3n+1)</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span> <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau */</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:nth-child(2n-2)</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span></pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <ul class="ul5">
+                  <li>Link 1</li>
+                  <li>Link 2</li>
+                  <li>Link 3</li>
+                  <li>Link 4</li>
+                  <li>Link 5</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * x:checked -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x:checked</span></h3>
+          <p>Checked digunakan untuk menargetkan kepada elemen yang telah diperiksa oleh elemen sebelumnya, dan biasanya checked digunakan untuk tag &lt;input&gt; yang ber-type radio atau checkbox</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">input</span><span class="hljs-selector-attr" style="color: rgb(230, 219, 116);">[id=btn]</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:checked</span> + <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">label</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: blueviolet;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-transform</span>: uppercase;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <input type="checkbox" id="btn" style="cursor: pointer;">
+                <label for="btn">Click Me</label>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * x:focus -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x:focus</span></h3>
+          <p>Focus digunakan ketika kursor mouse berada pada tag &lt;input&gt; atau lainnya, sehingga ia memfokus terhadap elemen tersebut</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">input</span><span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.text</span><span class="hljs-selector-attr" style="color: rgb(230, 219, 116);">[type="text"]</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:focus</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">width</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">280px</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border-color</span>: limegreen;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <input type="text" id="focus" placeholder="Your Name...">
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * x:not(selector) -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">x:not(selector)</span></h3>
+          <p>Digunakan untuk memilih semua elemen melakukan perubahan kecuali yang dilarang oleh simbol selector ini</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">div</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:not(</span><span class="hljs-selector-id" style="color: rgb(230, 219, 116);">#content2</span>) { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: tomato; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output not" style="height: 0%;">
+                <div class="content1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, itaque.</div>
+                <div id="content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, itaque.</div>
+                <div class="content3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, itaque.</div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <br>
+
+      <h2 id="h2-2">Property CSS 2</h2>
+      <div id="display" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Display</span></h3>
+          <p>Display adalah sebuah display yang ada disetiap namaTag, seperti tag &lt;div&gt; secara default memiliki displaynya block dan kita bisa mengubah display tersebut dengan memanggil <mark>property display</mark>. Ada beberapa nilainya yang bisa kita ubah, seperti: <mark>none</mark>, <mark>inline</mark>, <mark>block</mark> dan <mark>inline-block</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Penjelasan nilai pada property display:</dt>
+              <dd>
+                *- <b>none</b>, untuk menghilangkan sebuah elemen <br>
+                *- <b>inline</b>, tidak dapat menambahkan garis baru ketika dibuat (secara default) <br>
+                *- <b>block</b>, dapat mengatur ukuran elemennya <br>
+                *- <b>inline-block</b> dapat menambahkan garis baru serta mengatur ukurannya
+              </dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">display</span>: inline-block; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau nilai lainnya */</span></pre>
+        </div>
+      </div>
+
+      <div id="overflow" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Overflow</span></h3>
+          <p>Overflow adalah sebuah property yang digunakan untuk mengatur perilaku elemen yang kasusnya keluar dari <mark>parent-nya</mark> <br> <i>Apa itu Parent?</i> Parent adalah sebuah pembungkus/box yang didalamnya mempunyai beberapa tag-tag, dan tag disebut juga sebagai <mark>anak</mark>. Nilai pada property overflow seperti: <mark>visible</mark>, <mark>auto</mark>, <mark>hidden</mark> dan <mark>scroll</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Penjelasan nilai pada property overflow:</dt>
+              <dd>
+                *- <b>visible</b>, adalah nilai default disetiap property <br>
+                *- <b>auto</b>, CSS akan otomatis menambahkan scroll ketika kontennnya ga cukup, tapi jika cukup maka scroll akan hilang<br>
+                *- <b>hidden</b>, CSS akan menyembunyikan konten ketika melebihi parentnya<br>
+                *- <b>scroll</b>, memunculkan sebuah scroll seperti nilai auto, bedanya ketika kontennya cukup scrollnya tetep ada
+              </dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">overflow</span>: auto; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau nilai lainnya */</span></pre>
+        </div>
+        <!-- * Nilai Auto -->
+        <div class="col">
+          <h3>Output nilai <mark>auto</mark>:</h3>
+          <div class="output">
+            <div class="par1">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus sit inventore fugiat, consequatur ipsam assumenda. Amet eos sunt culpa exercitationem sequi nam harum corporis quae enim at incidunt, minus impedit quis sed possimus ea perspiciatis fugit eligendi dolor vel est molestias. Non, nemo sed. Similique laboriosam culpa autem provident!</p>
+            </div>
+          </div>
+        </div>
+        <!-- * Nilai Hidden -->
+        <div class="col">
+          <h3>Output nilai <mark>hidden</mark>:</h3>
+          <div class="output">
+            <div class="par2">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus sit inventore fugiat, consequatur ipsam assumenda. Amet eos sunt culpa exercitationem sequi nam harum corporis quae enim at incidunt.</p>
+            </div>
+          </div>
+        </div>
+        <!-- * Nilai Scroll -->
+        <div class="col">
+          <h3>Output nilai <mark>scroll</mark>:</h3>
+          <div class="output">
+            <div class="par3">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="float" class="content">
+        <!-- * Float -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Float</span></h3>
+          <p>Float adalah property CSS yang tugasnya mengatur posisi sebuah elemen, dan float memiliki tiga nilai, yaitu <mark>none</mark>, <mark>left</mark> dan <mark>right</mark>. Ada 2 hal didalam property float, yaitu <mark>normal flow</mark> dan <mark>out-of-flow</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Yang bisa dilakukan property float:</dt>
+              <dd>
+                *- <b>Text-Wrapping</b>, untuk membuat teks mengelilingi gambar atau elemen <br>
+                *- <b>Image Gallery</b>, untuk membuat serangkaian gambar menjadi sebuah galeri <br>
+                *- <b>Multi-Column Layout</b>, untuk membuat halaman memiliki beberapa kolom, dll
+              </dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">float</span>: left; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau lainnya */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="kotak">
+              <img src="../../../img/3.png" alt="Tester" class="kotakImg">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo adipisci incidunt, dolorem repellat tempore enim consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <!-- * Clear -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Clear</span></h3>
+          <p>Property clear bertugas membersihkan atau menghentikan property float. Karena kalo ga dihentikan, maka akan berantakan atau ga responsive <mark>parent-nya</mark>. Seperti yang kalian lihat output diatas, gambar tersebut keluar dari parent-nya</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Terdapat tiga nilai pada property clear, yaitu:</dt>
+              <dd>
+                *- <b>left</b>, digunakan ketika selector mempunyai float bernilai 'left'<br>
+                *- <b>right</b>, digunakan ketika selector mempunyai float bernilai 'right'<br>
+                *- <b>both</b>, digunakan ketika selector mempunyai float bernilai 'left' dan 'right'
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>Terdapat tiga cara menghentikan/membersihkan property float, yaitu:</dt>
+              <dd>
+                *- Menggunakan property overflow bernilai 'auto' <br>
+                *- Menggunakan &lt;div&gt; kosong <br>
+                *- Menggunakan Teknik Micro Clearfix
+              </dd>
+            </dl> <br>
+            <div class="col ls-line">
+              <p>Untuk ngakalin dengan micro clearfix, ada dibawah ini syntaxnya</p>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-comment" style="color: rgb(117, 113, 94);">/* Ini adalah Clear Float */</span>
+<span class="hljs-comment" style="color: rgb(117, 113, 94);">/* Micro Clearfix */</span>
+<span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.cf</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:before</span>,
+<span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.cf</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:after</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">content</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">" "</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">display</span>: table;
+}
+<span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.cf</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:after</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">clear</span>: both;
+}
+<span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.cf</span> {
+     *<span class="hljs-attribute" style="color: rgb(102, 217, 239);">zoom</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1</span>;
+}</pre>
+            </div>
+            <div class="col ls-line">
+              <p>Setelah di copy paste syntax-nya, di HTML ke parent yang punya float tersebut dan tambahkan kelas bernama <mark>cf</mark></p>
+              <h3>Contohnya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-tag" style="color: rgb(248, 248, 242);">&lt;<span class="hljs-name" style="color: rgb(249, 38, 114);">div</span> <span class="hljs-attr" style="color: rgb(166, 226, 46);">class</span>=<span class="hljs-string" style="color: rgb(230, 219, 116);">"container cf"</span>&gt;</span></pre>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">clear</span>: left; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau lainnya */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="kotak cf">
+              <img src="../../../img/3.png" alt="Tester" class="kotakImg">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo adipisci incidunt, dolorem repellat tempore enim consectetur, vitae unde eaque quia iste culpa quasi aut reprehenderit nulla. Libero quisquam deserunt officia nesciunt esse fugit veniam quam inventore?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="position" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Position</span></h3>
+          <p>Position adalah property penting dan agak rumit untuk pemula pelajari. Position dapat melakukan tata letak dari elemen elemen pada HTML, sesuai dengan keinginan programmer. Nilai pada property position, yaitu: <mark>static</mark>, <mark>relative</mark>, <mark>absolute</mark> dan <mark>fixed</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Penjelasan nilai pada property position: <br> 1. <b>static</b> (nilai default):</dt>
+                <dd>
+                  *- Jika tidak memberikan property position pada elemen, maka static adalah nilai defaultnya<br>
+                  *- Jika menggunakan selain position static, disebut sebagai <mark>non-static</mark>. Maka, akan membuat elemen menjadi berbeda dimensi dari elemen lainnya<br>
+                  *- Elemen yang diberikan position non-static, dapat menggunakan property tambahan, yaitu: <mark>top</mark>, <mark>right</mark>, <mark>bottom</mark> dan <mark>left</mark>
+                </dd>
+              </dl>
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="box box1"></div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+              </div>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>2. <b>relative</b>:</dt>
+                <dd>
+                  *- Ketika menggerakkan elemen dengan posisi relative, maka ruang yang ditempati oleh elemen tersebut tetep masih ada <br>
+                  *- Ketika menggerakkan elemen dengan posisi relative, maka elemen akan bergerak <mark>relative terhadap posisi semulanya</mark> <br>
+                  *- Jika memberikan property <mark>top: 0;</mark> dan <mark>left: 0;</mark>, maka elemen tersebut ga berubah dari posisi awalnya
+                </dd>
+              </dl>
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="box box1"></div>
+                <div class="box box2" style="position: relative; top: 10px; left: 10px;"></div>
+                <div class="box box3"></div>
+              </div>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>3. <b>absolute</b>:</dt>
+                <dd>
+                  *- Ketika menggerakkan elemen dengan posisi absolute, maka ruang yang ditempati oleh elemen tersebut dianggap <mark>tidak ada</mark> <br>
+                  *- Ketika menggerakkan elemen dengan posisi absolute, maka elemennya bergerak relatif terhadap posisi <mark>parent-nya</mark> <br>
+                  *- Jika memberi property <mark>top: 0</mark> dan <mark>left: 0</mark>, maka elemen akan menempel pada parent-nya (parent defaultnya adalah &lt;body&gt;)
+                </dd>
+              </dl>
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="box box1"></div>
+                <div class="box box2" style="position: absolute; top: 10px; left: 10px;"></div>
+                <div class="box box3"></div>
+              </div>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>4. <b>fixed</b>:</dt>
+                <dd>
+                  *- Ketika menggerakkan elemen tersebut menggunakan top, right, bottom, left, maka dia akan selalu bergerak <mark>relatif</mark> terhadap <mark>windows-nya</mark> si browser (windows si browser adalah &lt;body&gt;) <br>
+                  *- Ketika di scroll halamannya, maka elemen tersebut akan terkunci diposisi tertentu
+                </dd>
+                <dt>Maaf, tidak ada contoh Output</dt>
+              </dl>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">position</span>: relative; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau lainnya */</span></pre>
+        </div>
+      </div>
+
+      <div id="zindex" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Z-index</span></h3>
+          <p>Z-index adalah untuk mengatur elemen agar tampak lebih menonjol dari elemen lainnya. Property z-index juga bisa menggunakan property tambahan <mark>top</mark>, <mark>right</mark>, <mark>bottom</mark> dan <mark>left</mark> seperti property position. Nilainya sebuah angka tanpa satuan, semakin besar angka nilainya semakin paling depan elemen tersebut</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">z-index</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">10</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="box satu"></div>
+            <div class="box dua"></div>
+            <div class="box tiga"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h2 id="h2-3">Box Model</h2>
+      <div class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Box Model</span></h3>
+          <p>Box model adalah sebuah box yang didalamnya memiliki elemen elemen. Box model memiliki 4 property pendukungnya, seperti: <mark>margin</mark>, <mark>padding</mark>, <mark>border</mark> dan <mark>content</mark>. Untuk lebih jelasnya bisa kalian lihat melalui CTRL + SHIFT + I atau klik kanan dan pilih 'inspeksi</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Pembahasan mengenai shorthand dari ke-4 property tersebut:</dt>
+                <dd>
+                  *- <b>1 Nilai</b>, nilai untuk ke-4 sisi (semua sisi) <br>
+                  *- <b>2 Nilai</b>, nilai pertama untuk <mark>horizontal</mark> dan nilai kedua untuk <mark>vertikal</mark> <br>
+                  *- <b>3 Nilai</b>, nilai pertama untuk atas (top), nilai ke-2 untuk horizontal dan nilai ke-3 untuk bawah (bottom) <br>
+                  *- <b>4 Nilai</b>, nilainya seperti arah <mark>jarum jam</mark> 
+                </dd>
+              </dl>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">margin</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">25px</span> auto; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">padding</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">100px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span>; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> solid <span class="hljs-number" style="color: rgb(174, 129, 255);">#333</span>; }</pre>
+            </div>
+          </details>
+        </div>
+        <!-- * Margin -->
+        <div id="margin" class="col">
+          <h3 class="h3">*- <span class="span">Margin</span></h3>
+          <p>Margin adalah <mark>area transparan</mark> disekitar box (diluar border)</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Cara pemakaian margin: </dt>
+                <dd>
+                  *- <b>Overlapping Margin</b>, dua margin saling bertemu <br>
+                  *- <b>Negatif Margin</b>, dapat diberikan nilai negarif (-) <br>
+                  *- <b>Auto</b>, dapat diberikan nilai <mark>auto</mark> (nilainya menyesuaikan si elemen)
+                </dd>
+              </dl>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">margin</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">25px</span> auto; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="boxM">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In reprehenderit fuga cupiditate. Libero ducimus illo soluta in sed itaque blanditiis?</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * Padding -->
+        <div id="padding" class="col">
+          <h3 class="h3">*- <span class="span">Padding</span></h3>
+          <p>Padding adalah <mark>area transparan</mark> didalam box (antara border dan content</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Cara pemakaian padding:</dt>
+                <dd>
+                  *- Padding tidak dapat diberikan nilai negatif (-) <br>
+                  *- Padding dapat mempengaruhi ukuran elemennya <br>
+                  *- Padding punya property tambahan (jika butuh), yaitu <mark>box-sizing</mark> agar tidak mempengaruhi ukuran elemennya. Nilainya: <mark>border-box</mark>
+                </dd>
+              </dl>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">padding</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">20px</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-sizing</span>: border-box;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="boxP">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, reiciendis.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * Border -->
+        <div id="border" class="col">
+          <h3 class="h3">*- <span class="span">Border</span></h3>
+          <p>Border adalah <mark>batas</mark> di sekeliling margin dan padding. Border memiliki 4 style, yaitu <mark>solid</mark>, <mark>dotted</mark>, <mark>dashed</mark> dan <mark>double</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> solid <span class="hljs-number" style="color: rgb(174, 129, 255);">#111</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau style lainnya */</span></pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <div class="boxB">
+                  <div class="solidBx"><p>Style Solid</p></div>
+                  <div class="dottedBx"><p>Style dotted</p></div>
+                  <div class="dashedBx"><p>Style dashed</p></div>
+                  <div class="doubleBx"><p>Style double</p></div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * Content -->
+        <div id="konten" class="col">
+          <h3 class="h3">*- <span class="span">Content</span></h3>
+          <p>Content adalah sebuah isi atau konten yang berada didalam box model, yang berupa teks maupun sebuah gambar</p>
+        </div>
+      </div>
+      <br>
+      
+      <h2 id="h2-4">Quick Tip</h2>
+      <div id="lineH" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Line-Height</span></h3>
+          <p>Digunakan untuk memberi jarak pada sebuah baris paragraf. Nilainya angka dengan satuannya</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">line-height</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">35px</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="line-height: 35px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, alias? <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, corporis. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, sit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Lspacing" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Letter-Spacing</span></h3>
+          <p>Digunakan untuk mengatur jarak antar per-huruf. Nilainya angka dengan satuannya</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">letter-spacing</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="letter-spacing: 10px;">Lorem ipsum dolor sit amet!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Wspacing" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Word-Spacing</span></h3>
+          <p>Digunakan untuk mengatur jarak perkata. Nilainya angka dengan satuannya</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">word-spacing</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">20px</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <p style="word-spacing: 20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sudoEl" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Pseudo-Element</span></h3>
+          <p>Pseudo-element ini berbeda dengan pseudo-class. Pseudo-element digunakan untuk mengakses bagian elemen tertentu pada HTML atau memberikan style ecara terpisah</p>
+        </div>
+        <!-- * Target -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Target</span></h3>
+          <p>Digunakan untuk menentukan target atau tujuan saat keadaan di klik.</p>
+          <details>
+            <summary>Selangkapnya</summary>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:target</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: tomato; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <pre>*- <a href="#target1">Tomato</a>    *- <a href="#target2">Pink</a></pre>
+                <p id="target1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum?</p>
+                <p id="target2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nostrum?</p>
+              </div>
+            </div>
+          </details>
+        </div>
+        <!-- * After Before -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Before & After</span></h3>
+          <p>Before dan After digunakan untuk menambahkan konten baru (sesudah/sebelum elemen) di HTML, tanpa merubah atau menambahkan kode baru di HTML-nya. Ketika menggunakan before & after, terdapat titik dua 2x seperti ini: <mark>::before</mark> dan <mark>::after</mark> dan harus ada property <mark>content</mark></p>
+          <details>
+            <summary>Selangkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Berikut penjelasan apa aja yang bisa dilakukan property content: <br> <b>String</b>:</dt>
+                <dd>digunakan untuk menuliskan sebuah teks apapun isinya dan bisa diberikan style, atau selain teks bisa diberikan <mark>Enitas Code</mark> yang biasa digunakan sebagai icon atau glyph</dd>
+                <dt><b>Image</b>:</dt>
+                <dd>Dapat memberikan url() untuk menuju ke sebuah gambar, syntax-nya seperti ini: <mark>content: url(../img/image.png);</mark>, kekurangannya adalah gambar tersebut ga bisa di resize dan ga bisa diberikan gradient</dd>
+                <dt><b>None</b>:</dt>
+                <dd>Dapat di kosongkan kontennya seperti ini: <mark>content: " ";</mark></dd>
+                <dt><b>Counter</b>:</dt>
+                <dd>Untuk menghitung jumlah elemen yang ada di HTML</dd>
+              </dl>
+              <h3>kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">::before</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">content</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">"Hi, "</span>; }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">::after</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">content</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">" World!"</span>; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <h1 class="beaf1">Hello</h1> <br>
+                <div class="beaf2"></div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div id="fav" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Favicon</span></h3>
+          <p>Favicon digunakan untuk memberikan sebuah logo atau gambar kecil pada &lt;title&gt; dan sebuah filenya yang ber-ekstensi <mark>.ico</mark>. Biasanya berukuran 16x16 atau 32x32.</p>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-tag" style="color: rgb(248, 248, 242);">&lt;<span class="hljs-name" style="color: rgb(249, 38, 114);">link</span> <span class="hljs-attr" style="color: rgb(166,226,46);">rel</span>=<span class="hljs-string" style="color: rgb(230, 219, 116);">"shortcut icon"</span> <span class="hljs-attr" style="color: rgb(166,226,46);">href</span>=<span class="hljs-string" style="color: rgb(230, 219, 116);">"favicon.ico"</span>&gt;</span></pre>
+        </div>
+        <div class="col">
+          <p>Lalu syntax-nya ditaruh di bagian &lt;head&gt; dan cara mengubah ekstensinya, kalian bisa kunjungi link di menu help kami, cari aja favicon</p>
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <img src="../../../img/img-fav.png" alt="Tester" width="200" height="50">
+          </div>
         </div>
       </div>
     </article>
