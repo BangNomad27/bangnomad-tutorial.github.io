@@ -178,6 +178,222 @@ article {
   border: 2px solid #333;
   padding: 20px;
 }
+/* * Materi Border Radius */
+.col .output .borad {
+  display: flex;
+  justify-content: space-around;
+}
+.col .output .borad .borad1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.col .output .borad .borad1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #2196f3;
+}
+.col .output .borad .borad2 {
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #d44;
+}
+/* * Materi Opacity */
+.col .output .opa {
+  width: 300px;
+  height: 300px;
+  background-color: #f60;
+  opacity: .5;
+  position: relative;
+}
+.col .output .opa .opa-child {
+  width: 100px;
+  height: 100px;
+  background-color: #00f;
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  border-radius: 50%;
+}
+/* * Materi RGBa & HSLa */
+.col .output .box {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.col .output .box1 { background-color: rgba(255,102,0,.5); }
+.col .output .box2 { background-color: hsla(24,100%,63%,.5); }
+.col .output .box .box-child {
+  width: 100px;
+  height: 100px;
+  background-color: #00f;
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  border-radius: 50%;
+}
+/* * Materi Box Shadow */
+.col .output .boxShadow {
+  width: 200px;
+  height: 200px;
+  background-color: #39b54a;
+  margin: auto;
+}
+.col .output .boxShadow.nonOpsional { box-shadow: 7px 7px 5px #000; }
+.col .output .boxShadow.inset { box-shadow: inset 0 0 35px 5px #00f; }
+.col .output .boxShadow.multiShadow { box-shadow: 10px 10px 5px #f00,
+  -10px -10px 5px #00f; }
+.col .output .boxShadow.multiBorder {
+  box-shadow: 0 0 0 5px #f00,
+  0 0 0 10px #800080,
+  0 0 0 15px #ffd700,
+  0 0 0 20px #ff8c00;
+  border-radius: 50%;
+}
+/* * Materi  Text Shadow */
+.col .output .text {
+  font-size: 70px;
+  text-align: center;
+  color: #fff;
+  line-height: 2.5;
+}
+.col .output .text.child-1 { text-shadow: 0 10px 5px #006400; }
+.col .output .text.child-2 {
+  text-shadow: -9px 9px 2px #ffa500,
+  -18px 18px 2px #ff8c00,
+  -27px 27px 2px #ff6347;
+}
+.col .output .text.child-3 {
+  text-shadow: 10px 10px 5px rgba(255,0,0,.75),
+  -10px -10px 5px rgba(0,0,255,.75);
+}
+.col .output .text.child-4 {
+  text-shadow: 0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 30px #fff,
+  0 0 40px #ff00de,
+  0 0 70px #ff00de,
+  0 0 80px #ff00de,
+  0 0 100px #ff00de,
+  0 0 150px #ff00de;
+}
+.col .output .text.child-5 {
+  text-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #feec85,
+  -20px -20px 40px #ffae34,
+  20px -30px 50px #ec760c,
+  -20px -40px 60px #cd4606,
+  0 -50px 70px #973716,
+  10px -60px 80px #451b0e;
+}
+.col .output .text.child-6 {
+  background-color: #f1f2f6;
+  color: #333;
+  text-shadow: 4px 3px 0px #fff,
+  9px 8px 0px rgba(0,0,0,.15);
+}
+.col .output .text.child-7 {
+  background-color: #def;
+  color: rgba(10,60,150,.8);
+  text-shadow: 1px 4px 6px #def,
+  0 0 0 #000,
+  1px 4px 6px #def;
+}
+/* * Materi Gradients */
+.col .output .grBx {
+  display: flex;
+  justify-content: space-around;
+}
+.col .output .grBx .box {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+/* * Linear Gradient */
+.col .output .grBx .child-1 { background-image: linear-gradient(#e74c3c, #9b59b6, #f1c40f, #d35400); }
+.col .output .grBx .child-2 { background-image: linear-gradient(to right, #4169e1, #d44); }
+.col .output .grBx .child-3 { background-image: linear-gradient(to right bottom, #00f, #90ee90); }
+.col .output .grBx .child-4 { background-image: linear-gradient(to right, #87ceeb 63%, #32cd32 80%); }
+/* * Radial Gradient */
+.col .output .grBx .child-5 { background-image: radial-gradient(circle, #d35400 35%, #3498db 80%); }
+.col .output .grBx .child-6 { background-image: radial-gradient(circle closest-side, #f00 43%, #00f); }
+.col .output .grBx .child-7 { background-image: radial-gradient(circle farthest-side at top center, #080 33%, #800080 63%); }
+.col .output .grBx .child-8 { background-image: radial-gradient(#d35400 20%, #3498db 37%, #2c3e50 80%); }
+/* * Materi Fonts */
+details .col dl dd a[target] {
+  color: #4169e1;
+  text-decoration: none;
+}
+details .col dl dd a[target]:hover {
+  color: #ff6347;
+}
+/* * Font-Face */
+@font-face {
+  font-family: "alex brush";
+  src: url(../../../fonts/AlexBrush-Regular.ttf) format('truetype');
+}
+.col .output .fontFace {
+  font-size: 100px;
+  text-align: center;
+  font-family: "alex brush", sans-serif;
+}
+/* * Web Font Generator */
+@font-face {
+  font-family: 'open_sans';
+  src: url(../../../fonts/OpenSans-Regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.col .output .wfg {
+  font-size: 80px;
+  text-align: center;
+  font-family: 'open_sans', sans-serif;
+}
+/* * Materi Filters */
+.col .output .imgBx {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.col .output .imgBx .img {
+  width: 300px;
+  height: 300px;
+  border: 5px double #333;
+  margin-bottom: 20px;
+}
+.col .output .img.img1 { filter: blur(5px); }
+.col .output .img.img2 { filter: brightness(2.5); }
+.col .output .img.img3 { filter: contrast(250%); }
+.col .output .img.img4 { filter: saturate(2); }
+.col .output .img.img5 { filter: grayscale(1); }
+.col .output .img.img6 { filter: sepia(1); }
+.col .output .img.img7 { filter: hue-rotate(100deg); }
+.col .output .img.img8 { filter: invert(100%); }
+.col .output .img.img9 { filter: opacity(.5); }
+/* * Materi Transform */
+.col .output .kotak {
+  position: relative;
+  margin: auto;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.col .output .kotak:is(.kotak-1, .kotak-2, .kotak-3, .kotak-4) {
+  width: 100px;
+  height: 100px;
+  background-color: #ffc0cb;
+}
+.col .output .kotak.kotak-1:hover { transform: scale(1.2, 1.3); }
+.col .output .kotak.kotak-2:hover { transform: rotateY(360deg); }
+.col .output .kotak.kotak-3:hover { transform: skew(-30deg); }
+.col .output .kotak.kotak-4:hover { transform: translate(-50%, -50%); }
+
 
 @media screen and (max-width: 991px) {
   section {

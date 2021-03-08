@@ -33,7 +33,7 @@
     <div class="started">
       <h2>Mulai</h2>
       <p>
-        <b>Apa itu selector?</b> Selector adalah namaTag di HTML yang dipanggil namaTagnya dan disebut sebagai <mark>selector</mark>. Selector bisa juga dipanggil dengan nama <mark>kelas</mark> atau <mark>id</mark> didalam namaTag tersebut dan pemanggilan menggunakan nama kelas atau id adalah <mark>pseudo-class</mark>.
+        Di tutorial ke-2 ini udah masuk CSS 3, yang mana CSS terbaru saat ini dan di tutorial ke-2 ini ada tutorial CSS Flexbox dan CSS Grid yang lebih kompleks lagi, disini saya memberikan property yang sering digunakan, ga semuanya saya tampilkan disini. 
       </p>
     </div>
   </div>
@@ -59,30 +59,541 @@
           <li><a href="#animasi">Animation</a></li>
         </ul>
 
-        <h4><a href="#h2-2" style="margin-left: 45px;">Flexbox</a></h4>
+        <h4><a href="#h2-2" style="margin-left: 27px;">Next Layouts</a></h4>
         <ul>
-          <li><a href="#kontener1">Container</a></li>
-          <li><a href="#item1">Items</a></li>
-        </ul>
-
-        <h4><a href="#h2-3" style="margin-left: 32px;">CSS Grid</a></h4>
-        <ul>
-          <li><a href="#kontener2">Container</a></li>
-          <li><a href="#item2">Items</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#grid">CSS Grid</a></li>
         </ul>
 
         <h4><a href="#h2-4" style="margin-left: 22px;">Quick Tip</a></h4>
         <ul>
           <li><a href="#media">Media Queries</a></li>
           <li><a href="#unit">Units</a></li>
+          <li><a href="#reset">CSS Reset</a></li> <!-- :root -->
           <li><a href="#modern">Modern CSS</a></li>
         </ul>
       </div>
     </aside>
 
-    <article></article>
+    <article>
+      <h2 id="h2-1">Property CSS 3</h2>
+      <div id="radius" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Border-Radius</span></h3>
+          <p>Digunakan untuk melakukan perubahan pada box model yang dimana sudut sudut box model tidak lancip, melainkan menjadi tumpul. Semakin besar nilainya, box model akan tampak menjadi bulat/lingkaran.</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Property border-radius dan shorthand-nya:</dt>
+                <dd>
+                  *- border-top-left-radius <br>
+                  *- border-top-right-radius <br>
+                  *- border-bottom-left-radius <br>
+                  *- border-bottom-right-radius <br>
+                  *- border-radius
+                </dd>
+              </dl>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border-radius</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">50%</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="borad">
+              <div class="borad1">
+                <img src="../../../img/nopal1.png" alt="Tester">
+              </div>
+              <div class="borad2"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="opaciti" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Opacity</span></h3>
+          <p>Opacity digunakan untuk membuat suatu objek menjadi <mark>transparan</mark>. Opacity nilainya dari 0 sampai 1, yang bearti 0 = 0% sedangkan 1 = 100%. Contoh: nilainya 0.5 = 50% atau contoh lain bisa juga tanpa 0: nilainya .25 = 0.25 = 25%</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <p>Pada contoh output dibawah ini, warna biru saya berikan opacity dengan nilai 1 = 100%, tapi tetap transparan. Itu terjadi karena warna biru didalam parent warna oren, gimana cara atasinya agar warna oren tetep transparan sedangkan warna biru ga transparan? disitulah kita butuh RGBa / HSLa</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">opacity</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0.7</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="opa">
+              <div class="opa-child"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="rgba" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">RGBa & HSLa</span></h3>
+          <p>RGBa artinya Red Green Blue Alpha, RGBa digunakan untuk memberi transparansi juga seperti opacity, bedanya RGBa memberikan transparansi terhadap <mark>warna</mark> yang kita pilih/seleksi. Implementasinya sama seperti rgb() <br><br> HSLa artinya Hue Saturation Lightness Alpha, HSLa sama seperti RGBa. Bedanya terdapat satuan persen (%) pada HSLa dan HSLa akan lebih transparan dibanding RGBa</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <p>Perbedaan Opacity dengan RGBa/HSLa yaitu, <b>opacity</b> digunakan untuk mengtransparansikan elemen, jadi opacity ga peduli didalamnya ada elemen bewarna apa ia (opacity) tetep transparan. Sedangkan <b>RGBa/HSLa</b> digunakan untuk mengtransparansikan <mark>hanya</mark> diberikan kepada elemen yang dipilih, tetapi image ga bisa karena image ga punya background-color serta color-nya</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">rgba</span>(255,102,0,0.5); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* atau */</span> <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-color</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">hsla</span>(24,100%,63%,0.5); }</pre>
+        </div>
+        <div class="col">
+          <h3>Output RGBa:</h3>
+          <div class="output">
+            <div class="box box1">
+              <div class="box-child"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output HSLa:</h3>
+          <div class="output">
+            <div class="box box2">
+              <div class="box-child"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bxShadow" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Box-Shadow</span></h3>
+          <p>Digunakan untuk memberikan sebuah bayangan terhadap box modelnya. Box-shadow terdapat 2 cara, yaitu: <mark>non-opsional</mark> dan <mark>opsional</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Non-opsional, seperti:</dt>
+              <dd>
+                *- x-offset <br>
+                *- y-offset <br>
+                *- blur <br>
+                *- color
+              </dd>
+              <dt>Opsional, seperti:</dt>
+              <dd>
+                *- inset <br> *- spread
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>Penjelasan non-opsional: <br> *- <b>x-offset</b>:</dt>
+              <dd>Untuk mengatur jarak bayangan secara <mark>horizontal</mark> (kanan kiri), ini nilainya nomerik. Kalo dikasih 10px, maka dia akan bergerak ke kanan sebanyak 10px. Sebaliknya kalo kasih -10px, maka dia akan bergerak ke kiri sebanyak 10px.</dd>
+              <dt>*- <b>y-offset</b>:</dt>
+              <dd>Untuk mengatur jarak bayangan secara <mark>vertikal</mark> (atas bawah), ini nilainya nomerik. Kalo dikasih 10px, maka dia akan bergerak ke bawah sebanyak 10px. Sebaliknya kalo kasih -10px, maka dia akan bergerak ke atas sebanyak 10px.</dd>
+              <dt>*- <b>blur</b>:</dt>
+              <dd>Untuk mengatur seberapa besar <mark>blur</mark> yang ingin kita kasih pada bayangannya. Semakin besar angkanya, semakin nge-blur.</dd>
+              <dt>*- <b>color</b>:</dt>
+              <dd>Untuk memberikan warna yang kita inginkan, bisa nama warna, Hex, maupun rgb()</dd>
+            </dl> <br>
+            <dl>
+              <dt>Penjelasan opsional: <br> *- <b>inset</b>:</dt>
+              <dd>Digunakan untuk membuat bayangan berada <mark>didalam</mark> box modelnya</dd>
+              <dt>*- <b>spread</b>:</dt>
+              <dd>Untuk mengatur size (ukuran) bayangan</dd>
+            </dl> <br>
+            <dl>
+              <dt><b>Multiple Shadow</b>:</dt>
+              <dd>Kelebihan dari box-shadow bisa multiple shadow ialah memberikan lebih dari satu bayangan pada sebuah elemen</dd>
+              <dt><b>Multiple Border</b>:</dt>
+              <dd>Ada juga multiple border, tampak seperti border padahal hanyala sebuah bayangan yang nilai blurnya kosong/nol (0)</dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kode non-opsional:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: x-offset, y-offset, blur, color; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* sesuaikan urutannya */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">7px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">7px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#000</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* contohnya */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Output non-opsional:</h3>
+          <div class="output">
+            <div class="boxShadow nonOpsional"></div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Kode Opsional:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: inset, x-offset, y-offset, spread, blur, color; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* sesuaikan urutannya */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: inset <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">35px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#00f</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* contohnya */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#f00</span>, -<span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> -<span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#00f</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* contoh multiple */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Output Opsional:</h3>
+          <div class="output">
+            <div class="boxShadow inset"></div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Multiple Shadow:</h3>
+          <div class="output">
+            <div class="boxShadow multiShadow"></div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Multiple Border:</h3>
+          <div class="output">
+            <div class="boxShadow multiBorder"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="txtShadow" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Text-Shadow</span></h3>
+          <p>Digunakan untuk memberikan bayangan terhadap teksnya. Text-shadow nilainya non-opsional aja (sama seperti box-shadow) dan text-shadow juga bisa multiple shadow, seperti contoh output dibawah ini</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Non-opsional, seperti:</dt>
+              <dd>
+                *- x-offset <br>
+                *- y-offset <br>
+                *- blur <br>
+                *- color
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>Penjelasan non-opsional: <br> *- <b>x-offset</b>:</dt>
+              <dd>Untuk mengatur jarak bayangan secara <mark>horizontal</mark> (kanan kiri), ini nilainya nomerik. Kalo dikasih 10px, maka dia akan bergerak ke kanan sebanyak 10px. Sebaliknya kalo kasih -10px, maka dia akan bergerak ke kiri sebanyak 10px.</dd>
+              <dt>*- <b>y-offset</b>:</dt>
+              <dd>Untuk mengatur jarak bayangan secara <mark>vertikal</mark> (atas bawah), ini nilainya nomerik. Kalo dikasih 10px, maka dia akan bergerak ke bawah sebanyak 10px. Sebaliknya kalo kasih -10px, maka dia akan bergerak ke atas sebanyak 10px.</dd>
+              <dt>*- <b>blur</b>:</dt>
+              <dd>Untuk mengatur seberapa besar <mark>blur</mark> yang ingin kita kasih pada bayangannya. Semakin besar angkanya, semakin nge-blur.</dd>
+              <dt>*- <b>color</b>:</dt>
+              <dd>Untuk memberikan warna yang kita inginkan, bisa nama warna, Hex, maupun rgb()</dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-shadow</span>: x-offset, y-offset, blur, color; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* sesuaikan urutannya */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">text-shadow</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">10px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">5px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#006400</span>; } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* contoh nilai normal */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <h1 class="text child-1">Text Shadow 1</h1>
+            <h1 class="text child-2">Text Shadow 2</h1>
+            <h1 class="text child-3">Text Shadow 3</h1>
+            <h1 class="text child-4">Text Shadow 4</h1>
+            <h1 class="text child-5">Text Shadow 5</h1>
+            <h1 class="text child-6">Text Shadow 6</h1>
+            <h1 class="text child-7">Text Shadow 7</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="gradient" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Gradients</span></h3>
+          <p>Digunakan untuk mengradasikan berbagai macam macam warna. Gradients terbagi menjadi 2 bagian, yaitu <mark>linear-gradient</mark> dan <mark>radial-gradient</mark>. Linear-gradient untuk memberikan gradasi warna secara garis lurus, sedangkan radial-gradient untuk memberikan gradasi warna secara melingkar. Nah kedua nilai ini diberikan pada property <mark>background-image</mark>, <i>kenapa background-image bukannya background-color?</i> supaya bisa menggunakan background-image dan background-color secara bersamaan</p>
+        </div>
+        <!-- * Linear Gradient -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Linear-Gradient</span></h3>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>1. Bisa menggunakan nilai dengan satuan derajat (deg) <br> 2. Bisa menggunakan satuan arah, terdapat 4 bagian yaitu:</dt>
+              <dd>*- to top <br> *- to right <br> *- to bottom <br> *- to left</dd>
+              <dt>3. Bisa menggunakan arah diagonal, terdapat 4 bagian yaitu:</dt>
+              <dd>*- to left top <br> *- to right top <br> *- to left bottom <br> *- to right bottom</dd>
+              <dt>4. Bisa juga menggunakan <mark>color stop</mark>, untuk memberikan bobot warna yang berbeda beda, seperti output dibawah ini</dt>
+            </dl>
+          </details>
+          <h3>Syntax-nya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">linear-gradient</span>(warna 1,warna 2,...,warna n); }</pre>
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">linear-gradient</span>(#e74c3c, #9b59b6, #f1c40f, #d35400); }
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">linear-gradient</span>(to right, #4169e1, #d44); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* satuan arah */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">linear-gradient</span>(to right bottom, #00f, #90ee90); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* arah diagonal */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">linear-gradient</span>(to right, #87ceeb 63%, #32cd32 80%); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* color stop */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="grBx">
+              <div class="box child-1"></div>
+              <div class="box child-2"></div>
+              <div class="box child-3"></div>
+              <div class="box child-4"></div>
+            </div>
+          </div>
+        </div>
+        <!-- * Radial Gradient -->
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Radial-Gradient</span></h3>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Untuk tipe, jangkauan, posisi y serta posisi x ialah <mark>opsional</mark> <br> 1. Penjelasan nilai <mark>tipe</mark>, terbagi 2 yaitu:</dt>
+              <dd>*- <b>ellipse</b> (default) <br> *- <b>circle</b></dd>
+              <dt>2. Penjelasan <mark>jangkauan</mark>, jarak dari pusat gradient ke sisi terluar (sisi yang ga ada gradisanya), terbagi menjadi 4 yaitu:</dt>
+              <dd>
+                *- <b>closest-corner</b>, jarak dari pusat gradient ke sudut terdekat elemen <br>
+                *- <b>closest-side</b>, jarak dari pusat gradient ke sisi terdekat elemen <br>
+                *- <b>farthest-corner</b>, jarak dari pusat gradient ke sudut terjauh elemen <br>
+                *- <b>farthest-side</b>, jarak dari pusat gradient ke sisi terjauh elemen
+              </dd>
+              <dt>3. Penjelasan posisi-y dan posisi-x:</dt>
+              <dd>
+                *- <b>posisi-y</b>, terdapat nilai top, center, bottom dan satuannya pixel (px) <br>
+                *- <b>posisi-x</b>, terdapat nilai left, center, right dan satuannya pixel (px)
+              </dd>
+            </dl>
+          </details>
+          <h3>Syntax lengkapnya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">radial-gradient</span>( [tipe] [jangkauan], at [posisi-y], [posisi-x], warna 1,warna 2, ..., warna n); }</pre>
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">radial-gradient</span>(circle, #d35400 35%, #3498db 80%); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* tipe */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">radial-gradient</span>(circle closest-side, #f00 43%, #00f); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* jangakauan */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">radial-gradient</span>(circle farthest-side at top center, #080 33%, #800080 63%); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* posisi y-x */</span>
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">background-image</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">radial-gradient</span>(#d35400 20%, #3498db 37%, #2c3e50 80%); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* color stop */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="grBx">
+              <div class="box child-5"></div>
+              <div class="box child-6"></div>
+              <div class="box child-7"></div>
+              <div class="box child-8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="font" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Fonts</span></h3>
+          <p>Digunakan untuk mengubah font pada teks menjadi berbeda, dan ada empat cara, seperti: menggunakan <mark>font biasa</mark> pada CSS, menggunakan <mark>google font</mark>, menggunakan <mark>@font-face</mark> serta menggunakan <mark>web font generator</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt><b>Cara 1</b>: Font Bawaan</dt>
+                <dd>Menggunakan font biasa atau bawaan hanya sedikit, kalian bisa tuliskan langsung di font-family fontnya seperti: <mark>arial</mark>, <mark>consolas</mark>, <mark>verdana</mark> dan juga <mark>georgia</mark></dd> <br>
+                <dt><b>Cara 2</b>: Google Font</dt>
+                <dd>
+                  *- Klik website ini <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a> <br>
+                  *- Lalu pilih dan cari font yang ingin digunakan <br>
+                  *- Klik <mark>+ select this style</mark> pada font yang dipilih <br>
+                  *- Klik menu 'Embed' dan pilih ingin menggunakan &lt;link&gt; atau @import <br>
+                  *- Disini saya contohkan menggunakan &lt;link&gt;, dan salin link rel-nya lalu paste didalam Tag &lt;head&gt; <br>
+                  *- Salin syntax di 'Embed' tadi dan pastekan di selector apa yang ingin berubah fontnya, misal: <mark>h1 { font-family: 'Chilanka', cursive; }</mark> <br>
+                  <span style="color: #d44;">Notice</span>: Menggunakan google font membutuhkan koneksi internet (online)
+                </dd> <br>
+                <dt><b>Cara 3</b>: @font-face</dt>
+                <dd>
+                  *- Dengan menggunakan @font-face, membutuhkan file fontnya (download file font) dulu. Dengan begitu fontnya bisa digunakan secara <mark>offline</mark> <br>
+                  *- Download dan cari fontnya di <a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com/</a> <br>
+                  *- Pilih fontnya terlebih dahulu, dan klik <mark>Download OTF</mark> <br>
+                  *- Setelah di download, ekstrak filenya seperti biasa dan pindahkan ke folder ngoding kalian <br>
+                  *- Kemudian ketik syntax-nya di CSS, seperti ini: <br>
+                  <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-keyword" style="color: rgb(249, 38, 114);">@font-face</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">font-family</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">"alex brush"</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">src</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">url</span>(font/AlexBrush-Regular.tff) <span class="hljs-built_in" style="color: rgb(230, 219, 116);">format</span>( <span class="hljs-string" style="color: rgb(230, 219, 116);">'truetype'</span>);
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">font-family</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">"alex brush"</span>, arial, sans-serif;
+}</pre> <br>
+                <span style="color: #d44;">Notice</span>: file font saya terdapat di folder 'font', jadi buat dulu folder 'font'-nya atau hapus aja font/ pada url diatas
+                </dd> <br>
+                <p><i>Apa bedanya format WOFF dengan TFF?</i> Bedanya WOFF lebih cepat <mark>meng-load</mark> browsernya dibanding format TFF. WOFF artinya Web Open File Format, yang dikembangkan oleh <mark>mozilla</mark> khusus untuk website walaupun merupakan kompres dari tipe TFF/OTF</p>
+                <dt><b>Cara 4</b>: Web Font Generator <br> 1. Cara menggunakan web font generator:</dt>
+                <dd>
+                  *- Kunjung website <a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com/</a> <br>
+                  *- Pilih fontnya yang di inginkan <br>
+                  *- Lalu klik fontnya, jangan klik <mark style="background-color: #f00">Download OTF</mark> <br>
+                  *- Klik <mark>Webfont Kit</mark> dan ga semua font punya fasilitas ini <br>
+                  *- Lalu centang <mark>Choose Font Formats</mark> yang WOFF <br>
+                  *- Lalu klik <mark>Download @font-face Kit</mark>
+                </dd> <br>
+                <dt>2. Cara Ubah format TFF/OTF ke format WOFF:</dt>
+                <dd>
+                  *- Kunjungi website <a href="https://www.fontsquirrel.com/" target="_blank">https://www.fontsquirrel.com/</a> <br>
+                  *- Pilih fontnya dan jangan klik <mark style="background-color: #f00;">Download OTF</mark> <br>
+                  *- Pilih menu bar <mark>Generator</mark> <br>
+                  *- Upload file font yang berbentuk TFF/OTF-nya <br>
+                  *- Pilih <mark>optimal</mark> dan <mark>Agreements</mark> di centang <br>
+                  *- Lalu klik <mark>Download Your Kit</mark> dan ekstrak lagi dan pindahkan ke folder ngoding
+                </dd>
+              </dl>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Output @font-face:</h3>
+          <div class="output">
+            <h1 class="fontFace">Hello World!</h1>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Web Font Generator:</h3>
+          <div class="output">
+            <h1 class="wfg">Hello World!</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="vendor" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Vendor Prefixes</span></h3>
+          <p>Vendor prefixes adalah teknik yang digunakan agar syntax pada CSS dibuar berjalan di semua browser dan syntax ini spesifik untuk tiap tiap browsernya. <i>Apa itu vendor prefixes?</i> Prefix adalah awalan sebuah kata, sedangkan vendor adalah browser yang bersangkutan.</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Support pada browser:</dt>
+              <dd>
+                *- <b>-webkit-</b>, untuk Chrome, Safari, Opera versi terbaru <br>
+                *- <b>-moz-</b>, untuk Mozilla Firefox <br>
+                *- <b>-ms-</b>, untuk Internet Explorer <br>
+                *- <b>-o-</b>, untuk opera versi lama
+              </dd>
+            </dl>
+            <p>Untuk vendor ini saya udah siapkan link bantuannya di menu <mark>help</mark></p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Contoh kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">filter</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">url</span>(<span class="hljs-string" style="color: rgb(230, 219, 116);">'data:image/svg+xml;charset=utf-8,&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;&lt;filter id="filter"&gt;&lt;feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /&gt;&lt;/filter&gt;&lt;/svg&gt;#filter'</span>);
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">-webkit-filter</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">grayscale</span>(100%);
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">filter</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">grayscale</span>(100%);
+}</pre>
+        </div>
+      </div>
+
+      <div id="filter" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Filters</span></h3>
+          <p>Filter adalah sebuah property untuk mengubah kondisi suatu objek atau gambar. Syntax-nya seperti ini: <mark>selector { filter: [tipe filter]; }</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Beberapa tipe filter beserta satuannya:</dt>
+              <dd>
+                *- <b>blur</b>, pixel (px) <br>
+                *- <b>brightness</b>, (angka | %) <br>
+                *- <b>contrast</b>, (angka | %) <br>
+                *- <b>saturate</b>, (angka | %) <br>
+                *- <b>grayscale</b>, (angka | %) <br>
+                *- <b>sepia</b>, (angka | %) <br>
+                *- <b>hue-rotate</b>, derajat (deg) <br>
+                *- <b>invert</b>, (angka | %) <br>
+                *- <b>opacity</b>, (angka | %) <br>
+                *- <b>drop-shadow</b>, (sama seperti box-shadow nilainya) 
+              </dd>
+            </dl> <br>
+            <p><span style="color: #d44;">Notice</span>: Nilainya bisa ditulis (100%) atau (1), 1 = 100%. jikalao nilainya (250%), maka cara simpelnya (2.5) begitu pula dengan nilai lainnya <br><br> <i>Apa bedanya drop-shadow dengan box-shadow?</i> <b>drop-shadow</b> bisa memberikan bayangan pada teks yang ada didalam image, sedangkan <b>box-shadow</b> hanya memberikan bayangan pada box image-nya aja bukan objek pada image-nya</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">filter</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">brightness</span>(2.5); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* salah satu contohnya */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="imgBx">
+              <img class="img img1" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img2" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img3" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img4" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img5" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img6" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img7" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img8" src="../../../img/nopal2.png" alt="Tester">
+              <img class="img img9" src="../../../img/nopal2.png" alt="Tester">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="transform" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Transform</span></h3>
+          <p>Transform dapat digunakan untuk memanipulasi format visual dari elemen HTML. Transform ada 2D dan 3D, untuk ditutorial ini hanya contoh dari 2D dulu. Syntax-nya seperti ini: <mark>selector { transform: function; }</mark>. Function (fungsi) pada property transform ada beberapa, seperti: <mark>scale</mark>, <mark>rotate</mark>, <mark>skew</mark>, <mark>translate</mark> dan lain lain</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Penjelasan fungsi pada property transform: <br> *- scale (shorthand) <br> *- scaleX <br> *- scaleY</dt>
+                <dd>Untuk memperbesar atau memperkecil elemen</dd>
+                <dt>*- rotate (shorthand) <br> *- rotateX <br> *- rotateY</dt>
+                <dd>Untuk memutar elemen</dd>
+                <dt>*- skew (shorthand) <br> *- skewX <br> *- skewY</dt>
+                <dd>Untuk membuat elemen condong atau miring</dd>
+                <dt>*- translate (shorthand) <br> *- translateX <br> *- translateY</dt>
+                <dd>Untuk mengubah posisi elemennya</dd>
+              </dl>
+              <p><span style="color: #d44;">Notice</span>: Kalian bisa menggunakan shorthandnya dengan syarat posisi x dulu baru y, contoh: <mark>selector { transform: rotate(x, y); }</mark></p>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">transform</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">scale</span>(1.5, 2); } <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* salah satu contohnya */</span></pre>
+        </div>
+        <div class="col">
+          <h3>Output Scale:</h3>
+          <div class="output">
+            <div class="kotak kotak-1">
+              <div class="satu">Scale</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Rotate:</h3>
+          <div class="output">
+            <div class="kotak kotak-2">
+              <div class="satu">Rotate</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Skew:</h3>
+          <div class="output">
+            <div class="kotak kotak-3">
+              <div class="satu">Skew</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Translate:</h3>
+          <div class="output">
+            <div class="kotak kotak-4">
+              <div class="satu">Translate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="transisi" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Transition</span></h3>
+        </div>
+      </div>
+
+      <div id="animasi" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Animation</span></h3>
+        </div>
+      </div>
+    </article>
   </section>
   <!-- ! Materi - Finish -->
-  
 </body>
 </html>
