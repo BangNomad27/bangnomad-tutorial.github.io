@@ -33,7 +33,7 @@
     <div class="started">
       <h2>Mulai</h2>
       <p>
-        Di tutorial ke-2 ini udah masuk CSS 3, yang mana CSS terbaru saat ini dan di tutorial ke-2 ini ada tutorial CSS Flexbox dan CSS Grid yang lebih kompleks lagi, disini saya memberikan property yang sering digunakan, ga semuanya saya tampilkan disini. 
+        CSS 3 adalah CSS yang lebih luas dan banyak property baru. CSS 3 dibagi menjadi beberapa modul, dan tiap tiap modulnya menambahkan kemampuan atau fitur yang ada di CSS 2. CSS 3 juga dapat membuat load halaman lebih cepat, lebih fleksibel, mock-up lebih cepat tanpa bantuan bahasa scripting, dan menghindari penggunaan mark-up selector yang boros
       </p>
     </div>
   </div>
@@ -59,18 +59,18 @@
           <li><a href="#animasi">Animation</a></li>
         </ul>
 
-        <h4><a href="#h2-2" style="margin-left: 27px;">Next Layouts</a></h4>
+        <h4><a href="#h2-2">Responsive Layouts</a></h4>
         <ul>
           <li><a href="#flexbox">Flexbox</a></li>
           <li><a href="#grid">CSS Grid</a></li>
         </ul>
 
-        <h4><a href="#h2-4" style="margin-left: 22px;">Quick Tip</a></h4>
+        <h4><a href="#h2-3" style="margin-left: 22px;">Quick Tip</a></h4>
         <ul>
           <li><a href="#media">Media Queries</a></li>
-          <li><a href="#unit">Units</a></li>
+          <li><a href="#unit"> CSS Units</a></li>
           <li><a href="#reset">CSS Reset</a></li> <!-- :root -->
-          <li><a href="#modern">Modern CSS</a></li>
+          <li><a href="#modern">CSS Modern</a></li>
         </ul>
       </div>
     </aside>
@@ -584,12 +584,716 @@
       <div id="transisi" class="content">
         <div class="col">
           <h3 class="h3">*- <span class="span">Transition</span></h3>
+          <p>Transisi adalah property yang memungkinkan kita dapat mengubah elemen ketika bergerak menjadi <mark>halus</mark>. Syntax-nya, seperti ini: <mark>selector { transition: [call] [duration] [function] [delay]</mark>. Dari ke-4 nilai tersebut ada yang wajib, yaitu <b>durasi</b> dan durasi memiliki 2 satuan, yaitu: <mark>second (s)</mark> dan <mark>milisecond (ms)</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Penjelasannya: <br> Mendeklarasikan [call] ada 3, yaitu:</dt>
+              <dd>
+                *- all, memanggil semua nama property <br>
+                *- nama_property, memanggil salah satu nama property <br>
+                *- none, tidak ada
+              </dd>
+              <dt>Mendeklarasikan [function] ada 6, yaitu:</dt>
+              <dd>*- ease <br> *- ease-in <br> *- ease-out <br> *- ease-in-out <br> *- linear <br> *- cubic-bezier(w, x, y, z)</dd>
+              <dt>Mendeklarasikan [duration] dan [delay], yaitu:</dt>
+              <dd>
+                *- second (s), untuk menghitung secara perdetik <br>
+                *- milisecond (ms), untuk menghitung lebih rendah dari detik, contoh: 1000ms = 1 detik
+              </dd>
+            </dl>
+            <p><span style="color: #d44;">Notice</span>: Untuk fungsi cubic-bezier kalian bisa cek di 'inspeksi' atau CTRL + SHIFT + I dan atur nilainya (jika terdapat property transition pada suatu elemen)</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">transition</span>: all <span class="hljs-number" style="color: rgb(174, 129, 255);">1s</span> ease-in-out <span class="hljs-number" style="color: rgb(174, 129, 255);">500ms</span>; }</pre>
+        </div>
+        <div class="col">
+          <h3>Output perbedaan nilai [function]:</h3>
+          <div class="output" style="height: 0%;">
+            <div class="transisiBx">
+              <div class="transisi transisi1">ease</div>
+              <div class="transisi transisi2">ease-in</div>
+              <div class="transisi transisi3">ease-out</div>
+              <div class="transisi transisi4">ease-in-out</div>
+              <div class="transisi transisi5">linear</div>
+              <div class="transisi transisi6">cubic-bezier</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h3>Output Delay:</h3>
+          <div class="output" style="height: 0%;">
+            <div class="transisiBx">
+              <div class="transisi transisi7">Delay 1</div>
+              <div class="transisi transisi8">Delay 2</div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div id="animasi" class="content">
         <div class="col">
           <h3 class="h3">*- <span class="span">Animation</span></h3>
+          <p>Animasi sama halnya seperti transition, yang membedakan kedua property ini adalah keadaan <mark>awal</mark> dan <mark>akhirnya</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <h3>Syntax-nya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-keyword" style="color: rgb(249, 38, 114);">@keyframes</span> identifier {
+     <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">from</span> {
+          <span class="hljs-attribute" style="color: rgb(102, 217, 239);">property</span>: value;
+     }
+     <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">to</span> {
+          <span class="hljs-attribute" style="color: rgb(102, 217, 239);">property</span>: value;
+     }</pre>
+            </div>
+            <div class="col">
+              <p>Syntax diatas ialah <mark>selector baru</mark> bukan property. Berikut nilai lengkap pada property animation, seperti:</p>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation</span>: [identifier] [duration] [function] [delay] [iteration-count] [direction] [fill-mode] [play-state]; }</pre>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>Berikut penjelasan nilai nilainya, kecuali duration, timing-function, dan delay (penjelasannya sama seperti di property transition) <br> *- <b>identifier</b>:</dt>
+                <dd>Identifier adalah sebuah nama buatan (bebas) yang harus <mark>sesuai</mark> dengan identifier pada <mark>@keyframes</mark></dd>
+                <dt>*- <b>iteration-count</b>:</dt>
+                <dd>Untuk mengatur pengulangan kondisi animasi yang nilainya berupa "angka", mau berapa kali pengulangannya atau mengulang secara terus menerus dengan nilai <mark>infinite</mark></dd>
+                <dt>*- <b>direction</b>:</dt>
+                <dd>
+                  *- normal, animasi akan berjalan dari awal ke akhir <br>
+                  *- reverse, animasi akan berjalan dari akhir ke awal <br>
+                  *- alternate, animasi akan berjalan dari awal ke akhir dan dari akhir ke awal <br>
+                  *- alternate-reverse, animasi akan berjalan dari akhir ke awal dan dari awal ke akhir
+                </dd>
+                <dt>*- <b>fill-mode</b>:</dt>
+                <dd>
+                  Fill mode untuk menentukan akhir dari animasi seperti apa nantinya <br>
+                  *- none, tidak ada <br>
+                  *- forwards, berhenti di frame akhir <br>
+                  *- backwards <br>
+                  *- both
+                </dd>
+                <dt>*- <b>play-state</b>:</dt>
+                <dd>
+                  *- running, animasi berjalan semestinya (default) <br>
+                  *- paused, animasi akan berhenti, untuk melakukan nilai ke-2 ini dibutuhkan bantuan <mark>javascript</mark> supaya bisa berhenti di tengah jalan animasinya
+                </dd>
+              </dl>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kode Shorthand:</h3>
+          <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation</span>: identifier <span class="hljs-number" style="color: rgb(174, 129, 255);">1s</span> ease <span class="hljs-number" style="color: rgb(174, 129, 255);">2s</span> infinite alternate forwards running; }</pre>
+        </div>
+        <div class="col">
+          <h3>Kode property satuan:</h3>
+          <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-name</span>: identifier;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-duration</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1s</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-timing-function</span>: ease;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-delay</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">2s</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-iteration-count</span>: infinite;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-direction</span>: alternate;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-fill-mode</span>: forwards;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">animation-play-state</span>: running;
+}</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output">
+            <div class="animasiBx"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h2 id="h2-2">Responsive Layouts</h2>
+      <div id="flexbox" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Flexbox</span></h3>
+          <p>Flexbox atau disebut juga <mark>fleksibel box layout modul</mark> adalah teknik CSS yang udah lama sejak 2016/2017. Flexbox membantu kita dalam mengatur posisi layout (box model) pada halaman website. <br><br> Definisi lainnya, flexbox adalah sebuah model layout 1 dimensi yang dapat mengatur jarak dan kesejajaran antar item dalam sebuah container. <i>Apa yang dimaksud 1 dimensi?</i> Yaitu <mark>hanya dapat</mark> mengatur 1 dimensi pada saat tertentu, diantaranya <mark>baris</mark> (horizontal) dan <mark>kolom</mark> (vertikal) tidak bisa sekaligus. Jadi, jika ingin mengatur baris maka baris aja, sebaliknya jika mengatur kolom maka kolom aja. <i>Lalu bagaimana jika ingin mengatur ke-2 dimensi tersebut?</i> Teknik itu menggunakan CSS Grid, karena CSS Grid dapat mengatur 2 dimensi. <br><br> Definisi lainnya menurut CSS Tricks adalah sebuah modul yang menawarkan cara yang lebih efektif untuk menyusun, mensejajarkan dan mendistribusikan jarak antar item dalam sebuah container, meskipun ukurannya dinamis atau bahkan kita ga tau</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>Istilah yang harus di perhatikan dalam flexbox, yaitu:</dt>
+                <dd>
+                  *- <b>Wadah</b>, wadah disebut juga sebagai <mark>container</mark> atau <mark>parent</mark>-nya <br>
+                  *- <b>Items</b>, elemen elemen yang didalam container, disebut juga sebagai <mark>child</mark> <br>
+                  *- <b>Main Axis</b>, mengatur elemennya secara horizontal (default) <br>
+                  *- <b>Cross Axis</b>, mengatur elemennya secara vertikal <br>
+                  *- <b>Main Size</b>, menentukan ukuran container-nya <br>
+                  *- <b>Cross Size</b>, menentukan ukuran kolomnya <br>
+                  *- <b>Main Start</b> dan <b>Main End</b>, menentukan awal dan akhir elemennya (secara horizontal) <br>
+                  *- <b>Cross Start</b> dan <b>Cross End</b>, menentukan awal dan akhir elemennya (secara vertikal)
+                </dd> 
+                <p><span style="color: #d44;">Notice</span>: tapi yang wajib diperhatikan ialah <mark>container</mark> (wadah) dan <mark>items</mark>-nya</p> <br>
+                <dt>Property untuk container-nya: <span style="color: #d44;">Notice</span>: simbol | artinya <mark>atau</mark> <br> *- <b>display</b>:</dt>
+                <dd>Display ialah property yang sudah kalian kenal, namun dengan flexbox nilai pada display yaitu <mark>flex</mark> atau <mark>inline-flex</mark>. Ketika wadahnya ber-display: flex; maka akan membuat elemen didalamnya berperilaku flex juga</dd>
+                <dt>*- <b>flex-direction</b>:</dt>
+                <dd>Untuk mengatur arah atau urutan elemen didalam wadahnya, bisa secara horizontal atau kebalikkannya, dan vertikal atau kebalikkannya. <br> Nilainya: <mark>{ flex-direction: row | row-reverse | column | column-reverse; }</mark></dd>
+                <dt>*- <b>flex-wrap</b>:</dt>
+                <dd>Memungkinkan untuk memindahkan items ke baris dibawahnya atau kolom disampingnya, ketika elemennya sudah tidak muat lagi pada wadahnya. jika tidak di menambahkan property ini, maka elemennya akan memaksa terus di baris/kolom tersebut walaupun wadahnya udah ga muat lagi. <br> Nilainya: <mark>{ flex-wrap: nowrap | wrap | wrap-reverse; }</mark></dd>
+                <dt>*- <b>justify-content</b>:</dt>
+                <dd>
+                  Untuk mengatur jarak antar elemen elemennya terhadap main axis. Nilainya: <br>
+                  *- flex-start, rata kiri (default) <br>
+                  *- flex-end, rata kanan <br>
+                  *- center, rata tengah <br>
+                  *- space-between, elemen pertama mepet kiri, elemen terakhir mepet kanan dan sisanya diberi jarak yang sama <br>
+                  *- space-around, membagi setengah jarak sisi kiri dan kanannya <br>
+                  *- space-evenly, membagi sama rata jaraknya sisi kiri dan kanan
+                </dd>
+                <dt>*- <b>align-items</b>:</dt>
+                <dd>
+                  Untuk mengatur kesejajaran items terhadap cross axis. Nilainya: <br>
+                  *- flex-start, rata ke atas (default) <br>
+                  *- flex-end, rata ke bawah <br>
+                  *- center, rata tengah <br>
+                  *- stretch, memenuhi wadanya ketika tidak diberi property height <br>
+                  *- baseline, untuk mengatur rata tengah berdasarkan teksnya
+                </dd>
+                <dt>*- <b>align-content</b>:</dt>
+                <dd>Untuk mengatur jarak antar items terhadap cross axis, berfungsi ketika itemsnya lebih dari satu baris/kolom. <br> Nilainya: <mark>{ align-content: flex-start | flex-end | center | stretch | space-between | space-around; }</mark></dd> <br>
+                <dt>Property untuk itemsnya: <br> *- <b>order</b>:</dt>
+                <dd>Untuk mengatur urutan itemsnya. Nilainya angka</dd>
+                <dt>*- <b>flex</b> atau <b>flex-grow</b>:</dt>
+                <dd>Untuk mengatur ukuran dari itemsnya, dan flex adalah shorthandnya</dd>
+                <dt>*- <b>align-self</b>:</dt>
+                <dd>
+                  Untuk mengatur satu elemen yang ingin disejajarkan pada sebuah items yang spesifik terhadap cross axis. Nilainya: <br>
+                  *- flex-start, rata ke atas (default) <br>
+                  *- flex-end, rata ke bawah <br>
+                  *- center, rata tengah <br>
+                  *- stretch, memenuhi ukuran width dan height-nya
+                </dd>
+              </dl>
+            </div>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-class" style="color: rgb(166, 226, 46);">.container</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">display</span>: flex;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">justify-content</span>: space-around;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">align-items</span>: center;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">flex-direction</span>: column;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">flex-wrap</span>: wrap;
+}</pre>
+        </div>
+      </div>
+
+      <div id="grid" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">CSS Grid</span></h3>
+          <p>CSS grid adalah modul CSS baru, untuk mendefinisikan sistem layout berbentuk grid 2 dimensi</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Istilah dan terminologi dalam CSS grid: <br> *- <b>Grid Container</b>:</dt>
+              <dd>Sebuah elemen pembungkus grid yang didefinisikan dengan menuliskan property display bernilai <mark>grid</mark></dd>
+              <dt>*- <b>Grid Items</b>:</dt>
+              <dd>Sebuah elemen yang berada (1 level) didalam grid container</dd>
+              <dt>*- <b>Grid Line</b>:</dt>
+              <dd>Sebuah garis horizontal atau vertikal yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka</dd>
+              <dt>*- <b>Grid Cell</b>:</dt>
+              <dd>Potongan atau pertemuan antara baris dan kolom didalam grid</dd>
+              <dt>*- <b>Grid Area</b>:</dt>
+              <dd>Sebuah kumpulan yang lebih dari satu grid cell yang membentuk kotak</dd>
+              <dt>*- <b>Grid Track</b>:</dt>
+              <dd>Sebuah ukuran atau jarak antara grid line, entah itu horizontal atau vertikal</dd>
+              <dt>*- <b>Grid Gap</b>:</dt>
+              <dd>Jarak antara grid track atau grid cell</dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <p>Penjelasan dan fungsi grid pada container:</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <h4 style="font-weight: normal;">Property untuk kolom dan baris:</h4>
+            <dl>
+              <dt>*- <b>grid-template-columns</b> dan <b>grid-template-rows</b>:</dt>
+              <dd>
+                Kedua property itu mendefinisikan kolom/baris ngan cara menuliskan nilainya yang dipisah oleh <mark>spasi</mark>. Nilai tersebut merepresentasikan <mark>ukuran grid</mark> dan spasi merepresentasikan <mark>grid line</mark>. Nilainya ada 2, yaitu: <br>
+                *- track-size, berupa satuan px, %, auto, fr (fraction) <br>
+                *- line-name, nama yang bisa diberikan pada track <br><br> Perbedaan <mark>Explicit Grid</mark> dengan <mark>Implicit Grid</mark> adalah explicit secara jelas memberikan ukuran dari gridnya, sedangkan implicit gridnya menentukan ukurannya secara auto atau otomatis
+              </dd>
+            </dl> <br>
+            <h4 style="font-weight: normal;">Property auto kolom dan baris:</h4>
+            <dl>
+              <dt>*- <b>grid-auto-columns</b> dan <b>grid-auto-rows</b>:</dt>
+              <dd>
+                Kedua property itu untuk mengatur ukuran <mark>grid track</mark> yang tidak dituliskan pada grid template-nya atau disebut implicit track
+              </dd>
+            </dl> <br>
+            <h4 style="font-weight: normal;">Property auto flow:</h4>
+            <dl>
+              <dt>*- <b>grid-auto-flow</b>:</dt>
+              <dd>
+                Untuk mengatur penempatan item atau cell pada grid track, termasuk yang ditulis secara implicit. <br> Nilainnya: <mark>{ grid-auto-flow: row | columns | row dense | column dense; }</mark>
+              </dd>
+            </dl> <br>
+            <h4 style="font-weight: normal;">Property area dan gap:</h4>
+            <dl>
+              <dt>*- <b>grid-template-areas</b>:</dt>
+              <dd>Mendefinisikan grid template menggunakan nama dari area yang dituliskan pada property <mark>grid-area</mark> didalam itemnya</dd>
+              <dt>*- <b>grid-template</b>:</dt>
+              <dd>Sebuah shorthand untuk mendefinisikan grid-template-rows, grid-template-columns, dan grid-template-areas dalam satu deklarasi. <br> Nilainya: <mark>{ grid-template: grid-template-rows | grid-template-areas / grid-template-columns; }</mark></dd>
+              <dt>*- <b>grid-column-gap</b>, <b>grid-row-gap</b>, <b>column-gap</b> dan <b>row-gap</b>:</dt>
+              <dd>Mendefinisikan ukuran grid line atau jarak antara baris dan kolom</dd>
+              <dt>*- <b>grid-gap</b> atau <b>gap</b>:</dt>
+              <dd>Adalah sebuah shorthand untuk mendefinisikan column-gap dan row-gap dalam satu deklarasi</dd>
+              <dt>*- <b>grid</b>:</dt>
+              <dd>Shorthand yang mendefinisikan semua property grid dalam satu deklarasi. <br> Nilainya: <mark>{ grid: grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, grid-auto-flow; }</mark></dd>
+            </dl> <br>
+            <h4 style="font-weight: normal;">Property grid alignment: (Property ini mirip dengan perilaku dari flexbox)</h4>
+            <dl>
+              <dt>*- <b>justify-items</b>:</dt>
+              <dd>
+                Mensejajarkan grid-items pada sumbu horizontal. Nilainya: <br>
+                *- start, mepet kiri <br>
+                *- end, mepet kanan <br>
+                *- center, berada di tengah secara horizontal <br>
+                *- stretch, nilai ini tidak berlaku jika diberikan lebar (width)
+              </dd>
+              <dt>*- <b>align-items</b>:</dt>
+              <dd>Mensejajarkan grid-items pada sumbu vertikal. <br> Nilainya: <mark>{ align-items: start | end | center | stratch</mark> <br> Penjelasannya sama seperti justify-items</dd>
+              <dt>*- <b>place-items</b>:</dt>
+              <dd>Shorthand untuk menuliskan justify-items dan align-items dalam satu deklarasi</dd>
+              <dt>*- <b>justify-content</b>:</dt>
+              <dd>
+                Untuk mengatur posisi seluruh grid container pada sumbu <mark>horizontal</mark> dan dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya, biasanya etika grid-items-nya menggunakan ukuran yang fixed. Nilainya: <br>
+                *- start <br> *- end <br> *- center <br> *- stretch <br>
+                *- space-around, memberikan setengah jarak untuk tiap tiap ujung kolomnya <br>
+                *- space-between, kiri kanannya mepet dan sisanya diberi jarak (tengah) <br>
+                *- space-evenly, sama rata jaraknya
+              </dd>
+              <dt>*- <b>align-content</b>:</dt>
+              <dd>Penjelasannya sama seperti justify-content, tapi align-content secara <mark>vertikal</mark>. Nilainya: <mark>{ align-content: start | end | center | stretch | space-around | space-between | space-evenly; }</mark></dd>
+              <dt>*- <b>place-content</b>:</dt>
+              <dd>Shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi (sama seperti place-items)</dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <p>Penjelasan dan fungsi grid pada items:</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>*- <b>grid-column-start</b> & <b>grid-column-end</b> | <b>grid-row-start</b> & <b>grid-row-end</b>:</dt>
+              <dd>
+                Untuk menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik. Nilainya: <br>
+                *- grid-column-start: nomor | nama | span nomor | span nama | auto; <br>
+                *- grid-column-end: nomor | nama | span nomor | span nama | auto; <br>
+                *- grid-row-start: nomor | nama | span nomor | span nama | auto; <br>
+                *- grid-row-end: nomor | nama | span nomor | span nama | auto; <br><br>
+                Penjelasan nilainya: <br>
+                *- nomor | nama, menentukan nomor/nama yang diberikan pada grid line <br>
+                *- span nomor, item akan memanjang atau melebar sampai sejumlah nomornya <br>
+                *- span nama, item akan memanjang atau melebar sampai nama grid line tertentu <br>
+                *- auto, implicit grid
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>grid-column</b> dan <b>grid-row</b>:</dt>
+              <dd>
+                Shorthand untuk start end pada grid-column dan grid-row dalam satu deklarasi. Nilainya: <br>
+                *- grid-column: start-line / end-line | start-line / span value; <br>
+                *- grid-row: start-line / end-line | start-line / span value;
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>grid-area</b>:</dt>
+              <dd>
+                Menentukan nama area pada item sesuai dengan template yang sudah dibuat sebelumnya melalui property <mark>grid-template-areas</mark> dan ini juga bisa digunakan sebagai shorthand dari grid-column-start & grid-column-end | grid-row-start & grid-row-end. Nilainya: <br>
+                *- grid-area: nama_template; <br>
+                *- grid-area: row-start / column-start / row-end / column-end; <br><br>
+                Contohnya: <br>
+                *- grid-row-start: 2; <br>
+                *- grid-column-start: 1; <br>
+                *- grid-row-end: 4; <br>
+                *- grid-column-end: 3; <br><br>
+                Shorthand: <br>
+                *- grid-area: 2 / 1 / 4 / 3;
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>justify-self</b>:</dt>
+              <dd>
+                Untuk mengatur posisi item pada sebuah cell terhadap sumbu horizontal. Nilainya: <br>
+                *- start, berada diawal (sebelah kiri) itemnya <br>
+                *- end, berada diakhir (sebelah kanan) itemnya <br>
+                *- center, berada di tengah itemnya <br>
+                *- stretch, memenuhi itemnya dan stretch nilai default
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>align-self</b>:</dt>
+              <dd>Untuk mengatur posisi item pada sebuah cell terhadap sumbu vertikal dan penjelasan nilainya sama seperti justify-self (align-self secara vertikal atas bawah). Nilainya: <mark>{ align-self: start | end | center | stretch; }</mark></dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>place-self</b>:</dt>
+              <dd>
+                Shorthand untuk justify-self dan align-self dalam satu deklarasi. Nilainya: <mark>{ place-self: align-self justify-self } </mark> <br><br> Contohnya: <br>
+                *- place-self: start center; <br>
+                *- place-self: stretch; <br>
+                Jika kondisi nilainya berbeda, maka tuliskan kedua nilai tersebut. Sedangkan kondisi nilainya sama, maka cukup panggil satu nilai aja (walaupun ditulis keduanya ga masalah)
+              </dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <p>Penjelasan spesial function pada CSS grid:</p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>*- <b>repeat()</b>:</dt>
+              <dd>
+                Untuk menentukan ukuran grid track secara berulang. Contohnya: <br>
+                Tanpa function repeat(): <br>
+                *- grid-template-columns: 1fr 1fr 1fr 1fr 1fr; <br><br>
+                Menggunakan function repeat(): <br>
+                *- grid-template-columns: repeat(5, 1fr); /* atau */ <br>
+                *- grid-template-columns: repeat(2, 1fr), repeat(3, 1.5fr); /* boleh beda ukuran */
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>min-content</b> dan <b>max-content</b>:</dt>
+              <dd>Untuk menentukan seberapa besar ukuran pada grid tracknya berdasarkan content pada sebuah item. Nilainya: <mark>min-content | max-content</mark></dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>auto-fill</b> dan <b>auto-fit</b>:</dt>
+              <dd>
+                Untuk menentukan jumlah item untuk berada ada grid track dan biasanya digunakan didalam nilai function repeat(). Contohnya: <br>
+                *- grid-template-columns: repeat(auto-fill, 2fr); <br>
+                *- grid-template-columns: repeat(auto-fit, 2fr);
+              </dd>
+            </dl> <br>
+            <dl>
+              <dt>*- <b>minmax()</b>:</dt>
+              <dd>Untuk menentukan ukuran minimal dan maximal dari grid track. Contohnya <br> *- grid-template-columns: 1fr minmax(200px, 300px) 1fr;</dd>
+            </dl>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">display</span>: grid;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">grid-template-areas</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">"header header"</span>
+       <span class="hljs-string" style="color: rgb(230, 219, 116);">"aside main"</span>
+       <span class="hljs-string" style="color: rgb(230, 219, 116);">"nav main"</span>
+       <span class="hljs-string" style="color: rgb(230, 219, 116);">"footer footer"</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">grid-template-columns</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1</span>fr <span class="hljs-number" style="color: rgb(174, 129, 255);">1.5</span>fr;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">grid-template-rows</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1</span>fr <span class="hljs-number" style="color: rgb(174, 129, 255);">1</span>fr <span class="hljs-number" style="color: rgb(174, 129, 255);">1.3</span>fr;
+}</pre>
+        </div>
+        <div class="col">
+          <h3>Outputnya:</h3>
+          <div class="output" style="height: 0%;">
+            <div class="gridBx">
+              <div class="item header">Header</div>
+              <div class="item sidebar">Sidebar</div>
+              <div class="item main">Main</div>
+              <div class="item footer">Footer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <h2 id="h2-3">Quick Tip</h2>
+      <div id="media" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">Media Queries</span></h3>
+          <p>Media query adalah sebuah selector yang bertugas untuk membuat website <mark>responsive</mark>. Media query mempunyai 2 property, yaitu: <mark>min-width</mark> dan <mark>max-width</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>*- Penjelasan property <b>min-width</b>:</dt>
+              <dd>Jika ukuran lebarnya lebih kecil dari 600px, maka pake codingan <mark>diluar</mark> @media. Sedangkan ukuran lebarnya lebih besar dari 600px, maka pake codingan yang <mark>didalam</mark> @media</dd>
+              <dt>*- Penjelasan property <b>max-width</b>:</dt>
+              <dd>Jika ukuran lebarnya lebih kecil dari 600px, maka pake codingan yang <mark>didalam</mark> @media. Sedangkan ukuran lebarnya lebih besar dari 600px, maka pake codingan yang <mark>diluar</mark> @media</dd>
+            </dl>
+            <p><span style="color: #d44;">Notice</span>: Biasanya ukurannya tergantung apa yang ingin di responsive-kan, contoh: website di laptop reponsive ke mobile, atau website mobile responsive ke tablet, dan semacamnya</p>
+          </details>
+        </div>
+        <div class="col">
+          <h3>Kodenya:</h3>
+          <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* codingan diluar @media */</span>
+}
+<span class="hljs-keyword" style="color: rgb(249, 38, 114);">@media</span> <span style="color: rgb(102, 217, 239);">screen</span> and (max-width: <span class="hljs-number" style="color: rgb(174, 129, 255);">600px</span>) {
+     <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+          <span class="hljs-comment" style="color: rgb(117, 113, 94);">/* codingan didalam @media */</span>
+     }
+}</pre>
+        </div>
+      </div>
+
+      <div id="unit" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">CSS Units</span></h3>
+          <p>CSS Units atau CSS Value adalah sebuah angka nilai untuk memastikan ukuran elemennya. Nilai yang bisa diberikan, seperti: <mark>integer</mark>, <mark>number</mark>, <mark>percentage</mark> dan <mark>dimension</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <dl>
+              <dt>Penjelasannya: <br> 1. <b>Integer</b>:</dt>
+              <dd>
+                Bilangan bulat (positif/negatif) serta hanya menuliskan nilainya aja, contoh: <br>
+                *- z-index: -10; <br>
+                *- font-weight: 600; <br>
+                *- order: 3;
+              </dd> <br>
+              <dt>2. <b>Number</b>:</dt>
+              <dd>
+                Hanya angka aja tapi pecahan, contoh: <br>
+                *- opacity: 0.7; <br>
+                *- transform: scale(2.5); <br>
+                *- transition: 0.5s;
+              </dd> <br>
+              <dt>3. <b>Percentage</b>:</dt>
+              <dd>
+                Merepresentasikan sebagian dari nilai tertentu. Persen selalu relatif terhadap nilai yang lain, yaitu pembungkusnya (parent/wadah), contoh: <br>
+                *- width: 100%; <br>
+                *- transform: translate(-50%, -50%);
+              </dd> <br>
+              <dt>4. <b>Dimension</b>:</dt>
+              <dd>
+                Sebuah angka (number) yang memiliki satuan dibelakangnya, dan ada 4 kategori untuk dimension, yaitu: <br>
+                *- Angle <br> *- Time <br> *- Resolution <br> *- Lenght
+              </dd>
+              <dt>Penjelasan dari dimension: <br> a). <b>Angle (sudut)</b>:</dt>
+              <dd>
+                Salah satu satuannya yaitu derajat (deg), radiant (rad), gradian (grad) dan turn. Contohnya: <br>
+                *- transform: rotate(45deg); <br>
+                *- transform: rotate(0.523333333rad); <br>
+                *- transform: rotate(33.3grad); <br>
+                *- transform: rotate(0.08333333turn);
+              </dd>
+              <dt>b). <b>Time (waktu)</b>:</dt>
+              <dd>
+                Satuannya adalah second (s) dan ms (milisecond). Contohnya: <br>
+                *- transition: 500ms; <br>
+                *- transition: 1s;
+              </dd>
+              <dt>c). <b>Resolution (resolusi)</b>:</dt>
+              <dd>
+                Menentukan resolusi dari tampilan website. Satuannya dpi (dot per inch), dpcm (dot per centimeter) dan dppx (dot per pixel). Contohnya: <br>
+                *- @media print and (min-resolution: 300dpi) { ... }
+              </dd>
+              <dt>d). <b>Lenght</b>:</dt>
+              <dd>
+                Terdapat 2 cabang lagi, yaitu <mark>nilai absolute</mark> dan <mark>nilai relative</mark>.
+              </dd>
+              <dt>*- Lenght - Nilai Absolute:</dt>
+              <dd>
+                *- px (pixel) <br>
+                *- pt (point) <br>
+                *- pc (pica) <br>
+                *- cm (centimeter) <br>
+                *- mm (milimeter) <br>
+                *- in (inches)
+              </dd>
+              <dt>*- Lenght - Nilai Relative:</dt>
+              <dd>
+                *- %: persentase ukurannya relatif terhadap ukuran pembungkusnya <br>
+                *- em: relatif terhadap ukuran font yang sedang digunakan <br>
+                *- rem: relatif terhadap ukuran font pada &lt;html&gt; atau CSS reset (:root) <br>
+                *- ch: relatif terhadap lebar karakter '0' dari font yang sedang digunakan <br>
+                *- vh: relatif terhadap tinggi (height) dari viewport <br>
+                *- vw: relatif terhadap lebar (width) dari viewport <br>
+                *- vmin: relatif terhadap dimensi terkecil sebuah viewport <br>
+                *- vmax: relatif terhadap dimensi terbesar sebuah viewport
+              </dd>
+            </dl>
+          </details>
+        </div>
+      </div>
+
+      <div id="reset" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">CSS Reset</span></h3>
+          <p>CSS reset digunakan untuk <mark>meng-reset style</mark> pada tiap tiap selectornya, karena setiap selector mempunyai style defaultnya. Oleh karena itu, terkadang programmer mengreset style defaultnya agar lebih leluasa merubah atau menambahkan style buatan programmer tersebut. Dan ada 3 cara mengresetnya, yaitu: dengan psuedo-class simbol <mark>bintang (*)</mark>, menggunakan <mark>:root</mark>, atau menggunakan buatan <mark>meyerweb</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <div class="col">
+              <dl>
+                <dt>1. Contoh menggunakan simbol bintang:</dt>
+              </dl>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span style="color: rgb(249, 38, 114)">*</span>, <span style="color: rgb(249, 38, 114)">*</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">::before</span>, <span style="color: rgb(249, 38, 114)">*</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">::after</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">margin</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">padding</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">box-sizing</span>: <span style="color: rgb(102, 217, 239);">border-box</span>;
+}</pre>
+              <p><span style="color: #d44;">Notice</span>: ga pake psuedo-element juga ga masalah</p>
+            </div>
+            <div class="col">
+              <dl>
+                <dt>2. Contoh menggunakan <mark>:root</mark>: <br> Penjelasannya:</dt>
+                <dd>
+                  *- Buat dulu :root untuk resetnya <br>
+                  *- Kemudian tinggal panggil nama fungsinya
+                </dd>
+              </dl>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:root</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">--mainColor</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">#2196f3</span>;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">--mainWidth</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">900px</span>;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">width</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">var</span>(<span style="color: rgb(102, 217, 239);">--mainWidth</span>);
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">color</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">var</span>(<span style="color: rgb(102, 217, 239);">--mainColor</span>);
+}</pre>
+            </div>
+            <div class="col">
+              <p>3. Contoh menggunakan buatan <mark>meyerweb</mark>, kalian bisa kunjungi websitenya di menu help</p>
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; height: 150px; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">html</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">body</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">div</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">span</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">applet</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">object</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">iframe</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h1</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h2</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h3</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h4</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h5</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">h6</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">p</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">blockquote</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">pre</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">a</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">abbr</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">acronym</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">address</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">big</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">cite</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">code</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">del</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">dfn</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">em</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">img</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ins</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">kbd</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">q</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">s</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">samp</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">small</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">strike</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">strong</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">sub</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">sup</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">tt</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">var</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">b</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">u</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">i</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">center</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">dl</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">dt</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">dd</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ol</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">li</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">fieldset</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">form</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">label</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">legend</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">table</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">caption</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">tbody</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">tfoot</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">thead</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">tr</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">th</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">td</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">article</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">aside</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">canvas</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">details</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">embed</span>, 
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">figure</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">figcaption</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">footer</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">header</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">hgroup</span>, 
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">menu</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">nav</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">output</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ruby</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">section</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">summary</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">time</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">mark</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">audio</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">video</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">margin</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">padding</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">font-size</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">100%</span>;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">font</span>: inherit;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">vertical-align</span>: baseline;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">article</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">aside</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">details</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">figcaption</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">figure</span>, 
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">footer</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">header</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">hgroup</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">menu</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">nav</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">section</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">display</span>: block;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">body</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">line-height</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">1</span>;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ol</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">ul</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">list-style</span>: none;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">blockquote</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">q</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">quotes</span>: none;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">blockquote</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:before</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">blockquote</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:after</span>,
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">q</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:before</span>, <span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">q</span><span class="hljs-selector-pseudo" style="color: rgb(230, 219, 116);">:after</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">content</span>: <span class="hljs-string" style="color: rgb(230, 219, 116);">''</span>;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">content</span>: none;
+}
+<span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">table</span> {
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border-collapse</span>: collapse;
+  <span class="hljs-attribute" style="color: rgb(102, 217, 239);">border-spacing</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">0</span>;
+}</pre>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div id="modern" class="content">
+        <div class="col">
+          <h3 class="h3">*- <span class="span">CSS Modern</span></h3>
+          <p>CSS modern trik adalah trik khusus web desainer. Terdapat beberapa property CSS baru dan syaratnya ialah harus menggunakan <mark>browser versi terbaru</mark> (apapun itu browsernya), karena untuk CSS modern ini bisa dibilang baru dan mungkin aja belom support ke semua browser. Oleh karena itu, mungkin dari beberapa property tersebut ada yang memerlukan <mark>vendor prefixes</mark></p>
+          <details>
+            <summary>Selengkapnya</summary>
+            <!-- * Clipping Path -->
+            <div class="col">
+              <dl>
+                <dt>1. <b>Clipping Path</b>:</dt>
+                <dd>
+                  Untuk menyembunyikan bagian dari elemen menggunakan path dan nama property-nya adalah <mark>clip-path</mark>. Nilainya: <mark>{ clip-path: inset() | circle() | ellipse() | polygon(); }</mark> <br><br> Penjelasan nilainya: <br>
+                  *- inset(): parameternya sama seperti box model, yaitu 4 sisi. <br> Contoh: clip-path: inset(100px 0 50px 0); <br><br>
+                  *- circle(): parameternya satu aja. <br> Contoh: clip-path: circle(200px); <br><br>
+                  *- ellipse(): parameternya 2 (x, y), nilai pertama horizontal dan nilai kedua vertikal. <br> Contoh: clip-path: ellipse(200px, 400px); <br><br>
+                  *- polygon(): parameternya <mark>tak terhingga</mark> tapi minimal 3 (x y, x y, x y). <br> Contoh: clip-path: polygon(50% 0%, 0% 100%, 100% 100%); <br>
+                  <span style="color: #d44;">Notice</span>: Untuk polygon() ini terdapat website untuk membantu memperhitungkan nilainya, saya sudah sediakan di menu help
+                </dd>
+              </dl>
+            </div>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">clip-path</span>: <span class="hljs-built_in" style="color: rgb(230, 219, 116);">polygon</span>(11% 13%, 66% 4%, 91% 16%, 94% 79%, 71% 59%, 50% 91%, 46% 57%, 10% 68%, 35% 36%); }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output">
+                <img src="../../../img/nopal2.png" alt="Tester" class="path">
+              </div>
+            </div>
+            <!-- * Clipping Text -->
+            <div class="col">
+              <dl>
+                <dt>2. <b>Clipping Text</b>:</dt>
+                <dd>
+                  Untuk menyembunyikan bagian tertentu dari elemen menggunakan property <mark>background-clip</mark> dan nilainya <mark>text</mark>. background-clip dibantu dengan property satu lagi, yaitu <mark>text-fill-color</mark> bernilai <mark>transparent</mark>. Clipping Text ini membutuhkan vendor prefix, karena ada browser yang belom support property ini
+                </dd>
+              </dl>
+            </div>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> {
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">-webkit-background-clip</span>: text;
+     <span class="hljs-attribute" style="color: rgb(102, 217, 239);">-webkit-text-fill-color</span>: transparent;
+}</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <h1 class="clipTxt">Hello World!</h1>
+              </div>
+            </div>
+            <!-- * Text Stroke -->
+            <div class="col">
+              <dl>
+                <dt>3. <b>Text Stroke</b>:</dt>
+                <dd>Membuat teks mempunyai sebuah border. Property-nya bernama <mark>text-stroke</mark> dengan nilai <mark>angka (dimensionnya) serta color</mark></dd>
+              </dl>
+            </div>
+            <div class="col">
+              <h3>Kodenya:</h3>
+              <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 36, 31); color: rgb(248, 248, 242);"><span class="hljs-selector-tag" style="color: rgb(249, 38, 114);">selector</span> { <span class="hljs-attribute" style="color: rgb(102, 217, 239);">-webkit-text-stroke</span>: <span class="hljs-number" style="color: rgb(174, 129, 255);">2px</span> <span class="hljs-number" style="color: rgb(174, 129, 255);">#0f0</span>; }</pre>
+            </div>
+            <div class="col">
+              <h3>Outputnya:</h3>
+              <div class="output" style="height: 0%;">
+                <h1 class="stroke">Hello World!</h1>
+              </div>
+            </div>
+            <!-- * Masking Image -->
+            <div class="col">
+              <dl>
+                <dt>4. <b>Masking Image</b>:</dt>
+                <dd>Dengan menggunakan property ini, kalian membutuhkan gambar dengan extension <mark>.svg</mark> dan lebih baik lagi jika gambarnya hanya satu warna aja. Nama property-nya <mark>mask</mark> <br> Contoh: <mark>{ mask: url(image.svg); }</mark> <br><br> lalu bisa ditambah property <mark>mask-repeat: no-repeat</mark> dan masih banyak lagi property tambahannya</dd>
+              </dl>
+            </div>
+            <!-- * Shapping -->
+            <div class="col">
+              <dl>
+                <dt>5. <b>Shapping</b>:</dt>
+                <dd>Membuat tulisannya atau teksnya mengelilingi gambarnya, tapi tidak menganggap gambarnya punya areanya. Property-nya ada 2, yaitu <mark>shape-outside</mark> dan <mark>shape-inside</mark>. Lalu nilainya sama dengan <mark>clip-path</mark></dd>
+              </dl>
+            </div>
+            <!-- * Blending Modes -->
+            <div class="col">
+              <dl>
+                <dt>6. <b>Blending Modes</b>:</dt>
+                <dd>
+                  Untuk menghasilkan warna yang berbeda beda (definisi saya ini ga begitu kuat, dicoba aja codingin). Nama property-nya <mark>background-blend-mode</mark> dan <mark>mix-blend-mode</mark>. Nilainya: <br>
+                  *- color <br> *- color-burn <br> *- color-dodge <br> *- darken <br> *- difference <br> *- exclusion <br> *- hard-light <br> *- hue <br> *- lighten <br> *- luminosity <br> *- multiply <br> *- normal <br> *- overlay <br> *- saturation <br> *- screen <br> *- soft-light
+                </dd>
+              </dl>
+            </div>
+          </details>
         </div>
       </div>
     </article>

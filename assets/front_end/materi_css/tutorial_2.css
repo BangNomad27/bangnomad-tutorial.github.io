@@ -393,7 +393,111 @@ details .col dl dd a[target]:hover {
 .col .output .kotak.kotak-2:hover { transform: rotateY(360deg); }
 .col .output .kotak.kotak-3:hover { transform: skew(-30deg); }
 .col .output .kotak.kotak-4:hover { transform: translate(-50%, -50%); }
-
+/* * Materi Transition */
+.col .output .transisiBx .transisi {
+  width: 100px;
+  height: 100px;
+  background-color: #2196f3;
+  text-align: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.col .output .transisiBx:hover .transisi {
+  transform: rotate(720deg);
+  margin-left: 500px;
+  background-color: #00f;
+}
+.transisi1 { transition: all 3s ease; }
+.transisi2 { transition: all 3s ease-in; }
+.transisi3 { transition: all 3s ease-out; }
+.transisi4 { transition: all 3s ease-in-out; }
+.transisi5 { transition: all 3s linear; }
+.transisi6 { transition: all 3s cubic-bezier(0.24,-0.25,0.78,1.46); }
+.transisi7 { transition: all 3s 1.5s cubic-bezier(0.24,-0.25,0.78,1.46); }
+.transisi8 { transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s; }
+/* * Materi Animation */
+.col .output .animasiBx {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(#d44, #ff6347, #f00, #8b0000, #800000);
+  animation: identifier 2s ease infinite alternate forwards running;
+}
+@keyframes identifier {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 500px;
+    height: 200px;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+  }
+}
+/* * Materi CSS Grid */
+.col .output .gridBx {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 1px #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header"
+  "sidebar main main"
+  "sidebar main main"
+  "footer footer footer";
+}
+.col .output .gridBx .item {
+  width: 100%;
+  background-color: rgb(138,209,254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.col .output .gridBx .header {
+  grid-area: header;
+  background-color: #f0f;
+}
+.col .output .gridBx .sidebar {
+  grid-area: sidebar;
+  background-color: #ffa500;
+}
+.col .output .gridBx .main {
+  grid-area: main;
+  background-color: #add8e6;
+}
+.col .output .gridBx .footer {
+  grid-area: footer;
+  background-color: #333;
+}
+/* * Materi CSS Modern */
+.col .output .path {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  clip-path: polygon(1% 13%, 12% 0%, 93% 13%, 74% 30%, 91% 51%, 71% 59%, 90% 78%, 57% 73%, 57% 100%, 26% 76%, 9% 91%, 0% 65%);
+}
+.col .output .clipTxt {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  background-image: url(../../../img/banner2.jpg);
+  background-size: cover;
+  background-position: 0 -950px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.col .output .stroke {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  -webkit-text-stroke: 2px #0f0;
+}
 
 @media screen and (max-width: 991px) {
   section {
@@ -453,5 +557,13 @@ details .col dl dd a[target]:hover {
   }
   .started, article {
     padding: 0 20px;
+  }
+  /* * Materi CSS Grid */
+  .col .output .gridBx {
+    grid-template-areas: 
+    "header header header"
+    "sidebar sidebar sidebar"
+    "main main main"
+    "footer footer footer";
   }
 }
